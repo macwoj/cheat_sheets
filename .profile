@@ -1,0 +1,5 @@
+alias llar='ls -altr --color=auto'
+alias l='ls --color=auto'
+alias llr='ls -ltr --color=auto'
+alias ll='ls -l --color=auto'
+alias lla='ls -al --color=auto'
