@@ -47,6 +47,7 @@ git checkout feature
 git rebase develop                                           # this will rebase ontop of develop
 git checkout develop
 git merge feature                                            # fast forward develop to feature 
+git rebase -i HEAD~3                                         # squash last 4 commits
 
 MERGE
 git checkout develop                                         # get in the branch you want to merge INTO
