@@ -46,8 +46,18 @@ REBASE
 git checkout feature
 git rebase develop                                           # this will rebase ontop of develop
 git checkout develop
-git merge feature                                            # fast forward develop to feature 
-git rebase -i HEAD~3                                         # squash last 4 commits
+git merge feature                                            # fast forward develop to feature
+
+git rebase --abort                                           #abort rebase
+
+REBASE SQUASH
+git rebase -i HEAD~3                                         # squash last 3 commits
+
+pick f7f3f6d changed my name a bit
+squash 310154e updated README formatting and added blame
+squash a5f4a0d added cat-file
+
+then you will be able to change the messages
 
 MERGE
 git checkout develop                                         # get in the branch you want to merge INTO
