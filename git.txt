@@ -66,3 +66,4 @@ MERGE
   git checkout develop                                         # get in the branch you want to merge INTO
   git merge feature                                            # merges feature into develop
   git merge --abort                                            # if you get conflicts you can cancel the merge
+  git mergetool                                                # run for conflicts
