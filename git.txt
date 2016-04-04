@@ -27,17 +27,20 @@ git log --oneline --decorate --graph --all
 git push origin mwojton:fmlrefactor                          # push local mwojton branch to remote fmlrefactor
 git push origin develop                                      # push local develop branch to remote develop
 git push --force origin develop                              # push the local branch ptr to remote CAREFUL !!!!!
-git pull origin develop                                      # update submodule to latest
+
 git remote show origin                                       # show info about remote
 git reset --hard HEAD                                        # discard any changes
 git reset --hard HEAD~1                                      # discard last commit
 git rev-parse HEAD                                           # get sha of current commit
-git submodule foreach git pull                               # update all submodules to latest
-git submodule update --init --recursive                      # update to the checked in sha
-git submodule status                                         # show  sha's of all the submodules
 
 gitk&
 git gui&
+
+SUBMODULE
+git submodule foreach git pull                               # update all submodules to latest
+git submodule update --init --recursive                      # update to the checked in sha
+git submodule status                                         # show  sha's of all the submodules
+git pull origin develop                                      # update submodule to latest develop branch, do this from submodule folder
 
 STASH
   git stash apply stash@{2}                                    # unstash the specific stash from stack
