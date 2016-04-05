@@ -13,7 +13,8 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 git apply yourcoworkers.diff                                 # applypatch file
 git cherry-pick develop                                      # Apply the change introduced by the commit at the tip of the branch and create a new commit
 git branch -avv                                              # view tracking branches
-git branch -d features/fmlrefactor/mwojton                   # delete local branch
+git branch -d branch_to_delete                               # delete local branch
+git br -m branch_to_rename                                   # rename local branch
 git branch -u origin/develop                                 # set current branch to track remote branch
 git checkout filename										 # revert changes in file
 git checkout -b newbranch -t origin/develop                  # create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
