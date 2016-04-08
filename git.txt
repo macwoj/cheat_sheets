@@ -29,7 +29,7 @@ git push origin mwojton:fmlrefactor                          # push local mwojto
 git push origin develop                                      # push local develop branch to remote develop
 git push --force origin develop                              # push the local branch ptr to remote CAREFUL !!!!!
 
-git remote show origin                                       # show info about remote
+git remote show origin                                       # show info about remote, show repo URL
 git reset --hard HEAD                                        # discard any changes
 git reset --hard HEAD~1                                      # discard last commit
 git rev-parse HEAD                                           # get sha of current commit
