@@ -39,11 +39,16 @@ git reset --hard HEAD|discard any changes
 git reset --hard HEAD~1|discard last commit
 git rev-parse HEAD|get sha of current commit
 
-gitk&
-git gui&
+GUI|Description
+---|-----------
+gitk&|
+gitk --all|open gitk with all branches
+gitk -- filename|open gitk with only history for filename
+git gui&|
 
-STAGING
-git add -i                                                   # interactive staging
+STAGING|Description
+-------|-----------
+git add -i|interactive staging
   select 5 or p
   Stage this hunk [y,n,a,d,/,j,J,g,e,?]? ?
   y - stage this hunk
@@ -58,7 +63,7 @@ git add -i                                                   # interactive stagi
   K - leave this hunk undecided, see previous hunk
   s - split the current hunk into smaller hunks
   e - manually edit the current hunk
-  ? - print help
+  ? - print help|
 
 SUBMODULE
 git submodule foreach git pull                               # update all submodules to latest
