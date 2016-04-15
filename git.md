@@ -14,30 +14,30 @@ git config --global alias.suuir 'submodule update --init --recursive'|
 git config --global alias.lg 'log --oneline --decorate --graph'|
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"|
 
-git apply yourcoworkers.diff                                 # applypatch file
-git cherry-pick develop                                      # Apply the change introduced by the commit at the tip of the branch and create a new commit
-git branch -avv                                              # view tracking branches
-git branch -d branch_to_delete                               # delete local branch
-git branch -m branch_to_rename                               # rename local branch
-git branch -u origin/develop                                 # set current branch to track remote branch
-git checkout filename                                        # revert changes in file
-git checkout -b newbranch -t origin/develop                  # create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
-git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"# revert deleted file
-git checkout tags/<tag_name>
-git config --global credential.helper cache                  # no git password retyping
-git diff HEAD HEAD~1                                         # compare HEAD to commit right before HEAD
-git fetch --all                                              # Download objects and refs from remote
-git fetch --all; git branch -vv                              # update git cache
-git log --oneline --decorate --graph --all
-git push origin mwojton:fmlrefactor                          # push local mwojton branch to remote fmlrefactor
-git push origin develop                                      # push local develop branch to remote develop
-git push --force origin develop                              # push the local branch ptr to remote CAREFUL !!!!!
-
-git remote show origin                                       # show info about remote, show repo URL
-git remote add local ../otherrepo
-git reset --hard HEAD                                        # discard any changes
-git reset --hard HEAD~1                                      # discard last commit
-git rev-parse HEAD                                           # get sha of current commit
+Command|Description
+-------|-----------
+git apply yourcoworkers.diff|apply patch from file
+git cherry-pick develop|Apply the change introduced by the commit at the tip of the branch and create a new commit
+git branch -avv|view tracking branches
+git branch -d branch_to_delete|delete local branch
+git branch -m branch_to_rename|rename local branch
+git branch -u origin/develop|set current branch to track remote branch
+git checkout filename|revert changes in file
+git checkout -b newbranch -t origin/develop|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
+git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"|revert deleted file
+git checkout tags/<tag_name>|
+git config --global credential.helper cache|no git password retyping
+git diff HEAD HEAD~1|compare HEAD to commit right before HEAD
+git fetch --all|Download objects and refs from remote
+git fetch --all; git branch -vv|update git cache
+git push origin mwojton:fmlrefactor|push local mwojton branch to remote fmlrefactor
+git push origin develop|push local develop branch to remote develop
+git push --force origin develop|push the local branch ptr to remote CAREFUL !!!!!
+git remote show origin|show info about remote, show repo URL
+git remote add local ../otherrepo|add remote branch from local repo in different directory
+git reset --hard HEAD|discard any changes
+git reset --hard HEAD~1|discard last commit
+git rev-parse HEAD|get sha of current commit
 
 gitk&
 git gui&
