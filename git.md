@@ -1,5 +1,4 @@
-##Test###
-test
+## Test
 git checkout -b <branchname>
 
 Shortcuts|
