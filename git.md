@@ -1,22 +1,17 @@
-### test
-     test yes
-
-
-Shortcuts|
----------|
-git config --global alias.br branch|
-git config --global alias.bravv 'branch -avv'|
-git config --global alias.brvv 'branch -vv'|
-git config --global alias.ch checkout|
-git config --global alias.me merge|
-git config --global alias.pu pull|
-git config --global alias.sta stash|
-git config --global alias.staa 'stash apply'|
-git config --global alias.st status|
-git config --global alias.su submodule|
-git config --global alias.suuir 'submodule update --init --recursive'|
-git config --global alias.lg 'log --oneline --decorate --graph'|
-git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"|
+### Shortcuts
+     git config --global alias.br branch
+     git config --global alias.bravv 'branch -avv'
+     git config --global alias.brvv 'branch -vv'
+     git config --global alias.ch checkout
+     git config --global alias.me merge
+     git config --global alias.pu pull
+     git config --global alias.sta stash
+     git config --global alias.staa 'stash apply'
+     git config --global alias.st status
+     git config --global alias.su submodule
+     git config --global alias.suuir 'submodule update --init --recursive'
+     git config --global alias.lg 'log --oneline --decorate --graph'
+     git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 Command|Description
 -------|-----------
