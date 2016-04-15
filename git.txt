@@ -32,6 +32,7 @@ git push origin develop                                      # push local develo
 git push --force origin develop                              # push the local branch ptr to remote CAREFUL !!!!!
 
 git remote show origin                                       # show info about remote, show repo URL
+git remote add local ../otherrepo
 git reset --hard HEAD                                        # discard any changes
 git reset --hard HEAD~1                                      # discard last commit
 git rev-parse HEAD                                           # get sha of current commit
