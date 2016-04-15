@@ -66,25 +66,18 @@ git stash show -p stash@{0}|show the stash diff
 git stash clear|clear all stashed
 git checkout stash@{0} -- <filename>|checkout file from stash
 
-REBASE
-  git checkout feature
-  git rebase develop                                           # this will rebase ontop of develop
-  git checkout develop
-  git merge feature                                            # fast forward develop to feature
-  
-  git rebase --abort                                           #abort rebase
+REBASE|Description
+------|-----------
+git rebase develop|this will rebase ontop of develop the current branch
+git rebase --abort|abort rebase
 
-REBASE SQUASH
-  git rebase -i HEAD~3                                         # squash last 3 commits
-  
-  pick f7f3f6d changed my name a bit
-  squash 310154e updated README formatting and added blame
-  squash a5f4a0d added cat-file
-  
-  then you will be able to change the messages
+REBASE SQUASH|Description
+-------------|-----------
+git rebase -i HEAD~3|squash last 3 commits
 
-MERGE
-  git checkout develop                                         # get in the branch you want to merge INTO
-  git merge feature                                            # merges feature into develop
-  git merge --abort                                            # if you get conflicts you can cancel the merge
-  git mergetool                                                # run for conflicts
+
+MERGE|Description
+-----|-----------
+git merge feature|merges feature into current branch
+git merge --abort|if you get conflicts you can cancel the merge
+git mergetool|run for conflicts
