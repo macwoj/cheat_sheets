@@ -1,10 +1,5 @@
-### Checkout a new working branch ###
-     git checkout -b <branchname>
-
-### Make Changes ###
-
-     git add
-     git commit -m "description of changes"
+### test
+     test yes
 
 
 Shortcuts|
