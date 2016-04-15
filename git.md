@@ -58,12 +58,13 @@ git submodule status|show  sha's of all the submodules
 git pull origin develop|update submodule to latest develop branch, do this from submodule folder
 git submodule sync|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
 
-STASH
-  git stash apply stash@{2}                                    # unstash the specific stash from stack
-  git stash list                                               # get list of stashed commits
-  git stash show -p stash@{0}									                 # show the stash diff
-  git stash clear                                              # clear all stashed
-  git checkout stash@{0} -- <filename>						             # checkout file from stash
+STASH|Description
+-----|-----------
+git stash apply stash@{2}|unstash the specific stash from stack
+git stash list|get list of stashed commits
+git stash show -p stash@{0}|show the stash diff
+git stash clear|clear all stashed
+git checkout stash@{0} -- <filename>|checkout file from stash
 
 REBASE
   git checkout feature
