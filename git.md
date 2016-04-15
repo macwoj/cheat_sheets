@@ -14,8 +14,8 @@
      git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 ### Commands
- |Description
--|-----------
+MISC|Description
+----|-----------
 git apply yourcoworkers.diff|apply patch from file
 git cherry-pick develop|Apply the change introduced by the commit at the tip of the branch and create a new commit
 git branch -avv|view tracking branches
