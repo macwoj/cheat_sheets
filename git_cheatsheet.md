@@ -5,6 +5,7 @@
      git config --global alias.ch checkout
      git config --global alias.me merge
      git config --global alias.pu pull
+     git config --global alias.puso push origin
      git config --global alias.sta stash
      git config --global alias.staa 'stash apply'
      git config --global alias.st status
