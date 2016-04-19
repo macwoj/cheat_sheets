@@ -18,9 +18,10 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 MISC|Description
 ----|-----------
 `git apply yourcoworkers.diff`|apply patch from file
-`git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git branch -avv`|view tracking branches
 `git branch -d branch_to_delete`|delete local branch
+`git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
+`git cherry-pick sha`|Apply the commit with sha to the current branch 
 git branch -m branch_to_rename|rename local branch
 git branch -u origin/develop|set current branch to track remote branch
 git checkout filename|revert changes in file
