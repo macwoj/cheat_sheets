@@ -7,4 +7,4 @@ VIM|Description|Reference
 ||||||
 ----|----|----|----|----|----|
 |||`gg` first line|||
-|||`G` last line|||
+|||**`G`** last line|||
