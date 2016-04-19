@@ -6,4 +6,5 @@ VIM|Description|Reference
 
 ||||||
 ----|----|----|----|----|----|
-|||a test|||
+|||`gg` first line|||
+|||`G` last line|||
