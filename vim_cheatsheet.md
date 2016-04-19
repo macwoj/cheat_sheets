@@ -7,4 +7,5 @@ VIM|Description|Reference
 ||||||
 ----|----|----|----|----|----|
 |||**`gg`** first line|||
+|**`#`** find word cursor|**`n`** prev text|**`?text`** find|**`N`** next text||
 |||**`G`** last line|||
