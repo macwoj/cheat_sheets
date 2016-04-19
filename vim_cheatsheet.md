@@ -6,5 +6,5 @@ VIM|Description|Reference
 
 ||||||
 ----|----|----|----|----|----|
-|||`gg` first line|||
+|||**`gg`** first line|||
 |||**`G`** last line|||
