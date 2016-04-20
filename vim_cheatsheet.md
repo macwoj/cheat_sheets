@@ -13,4 +13,4 @@ VIM|Description|Reference
 |||**`{`**paragraph|**`(`**sentance||
 |||**`G`**last line|||
 |||**`k`**up|||
-||**`h`**left|`M`middle screen|**`l`**right
+||**`h`**left|**M**middle screen|**`l`**right
