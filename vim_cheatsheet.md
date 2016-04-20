@@ -11,7 +11,7 @@ VIM|Description|Reference
 |||**C-b**`page`|**C-u**`1/2 page`||
 |||**H**`top screen`|||
 |||**{**`paragraph`|**(**`sentence`||
-|||**k**`up`|||**ge
+|||**k**`up`|||
 **b**`word`|**ge**`word end`|**h**`left`|**M**`screen`|**l**`right`|**e**`word end`|**w**`word`
 |||**j**`down`
 ||**)**`sentence`|**}**`paragraph`|
