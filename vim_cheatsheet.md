@@ -17,4 +17,4 @@ VIM|Description|Reference
 ||**)**`sentence`|**}**`paragraph`|
 |||**L**`screen`|
 ||**C-d**`1/2 page`|**C-f**`page`|
-||**N**`prev find`|**/text**`find`|**n**`next find`|***`find word cursor`|
+||**N**`prev find`|**/text**`find`|**n**`next find`|* * *`find word cursor`|
