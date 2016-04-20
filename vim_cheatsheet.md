@@ -6,6 +6,11 @@ VIM|Description|Reference
 
 ||||||
 ----|----|----|----|----|----|
-|||**`gg`** first line|||
-|**`#`** find word cursor|**`n`** prev text|**`?text`** find|**`N`** next text||
-|||**`G`** last line|||
+|||**`gg`**first line|||
+|**`#`**find word cursor|**`n`**prev text|**`?text`**find|**`N`**next text||
+|||**`C-b`**page|**`C-u`**1/2 page||
+|||**`H`**top screen|||
+|||**`{`**paragraph|**`(`**sentance||
+|||**`G`**last line|||
+|||**`k`**up|||
+||**`h`**left|**`M`**middle screen|**`l`**right
