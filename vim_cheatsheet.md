@@ -4,7 +4,7 @@ VIM|Description|Reference
 `v`|Enter Visual mode|
 `r[char]`|replace all chars in selection with *[char]*, this works for visual block mode too|
 
-||||||
+||||||||
 ----|----|----|----|----|----|----|----|
 |||**gg**`first line`|||
 |**#**`find word cursor`|**n**`prev find`|**?text**`find`|**N**`next find`||
