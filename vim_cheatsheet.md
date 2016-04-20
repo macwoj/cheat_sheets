@@ -14,6 +14,7 @@ VIM|Description|Reference
 |||**G**`last line`|||
 |||**k**`up`|||
 ||**h**`left`|**M**`screen`|**l**`right`
+|||**j**`down`
 ||**)**`sentence`|**}**`paragraph`|
 |||**L**`screen`|
 ||**C-d**`1/2 page`|**C-f**`page`|
