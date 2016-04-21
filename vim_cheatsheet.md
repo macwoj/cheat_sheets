@@ -12,7 +12,7 @@ VIM|Description|Reference
 ||||**H**`top screen`|||
 ||||**{**`paragraph`|**(**`sentence`||
 ||||**k**`up`|||
-**b**`word`|**ge**`word end`|**h**`left`|**M**`screen`|**l**`right`|**e**`word end`|**w**`word`
+**b**`word`|**ge**`word end`|**h**`left`|**M**`screen`<br>**zz**`center cursor`|**l**`right`|**e**`word end`|**w**`word`
 ||||**j**`down`
 |||**)**`sentence`|**}**`paragraph`|
 ||||**L**`screen`|
