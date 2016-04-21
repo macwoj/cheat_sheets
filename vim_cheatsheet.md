@@ -48,3 +48,8 @@ S delete all text on line and start inserting in its place (substitute line)
 cw delete to the end of current word and start inserting in its place (any movement command can be substituted for w)
 cc same as S (change line)
 C delete from the cursor to the end of line and start inserting at the cursor position
+
+:{range}sort u
+Yes, it's that simple.
+
+You could create a range in advance, such as 'a,. (from mark 'a' to the current line) or you could create one on-the-fly using visual selection by pressing ':' in visual mode, after selecting the text you wish to sort, to get a range of '<,'> on the command line.
