@@ -20,14 +20,15 @@ MISC|Description
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
 `git branch -d branch_to_delete`|delete local branch
+`git branch -m branch_to_rename`|rename local branch
+`git branch -u origin/develop`|set current branch to track remote branch
+`git checkout filename`|revert changes in file
+`git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
+`git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
+`git checkout tags/<tag_name>`|
 `git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git cherry-pick sha`|Apply the commit with sha to the current branch 
-git branch -m branch_to_rename|rename local branch
-git branch -u origin/develop|set current branch to track remote branch
-git checkout filename|revert changes in file
-git checkout -b newbranch -t origin/develop|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
-git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"|revert deleted file
-git checkout tags/<tag_name>|
+`git commit --amend`|change last commit message
 git config --global credential.helper cache|no git password retyping
 git diff HEAD HEAD~1|compare HEAD to commit right before HEAD
 git fetch --all|Download objects and refs from remote
@@ -43,14 +44,14 @@ git rev-parse HEAD|get sha of current commit
 
 GUI|Description
 ---|-----------
-gitk&|
-gitk --all|open gitk with all branches
-gitk -- filename|open gitk with only history for filename
-git gui&|
+`gitk&`|
+`gitk --all`|open gitk with all branches
+`gitk -- filename`|open gitk with only history for filename
+`git gui&`|
 
 STAGING|Description
 -------|-----------
-git add -i|interactive staging, enter ? to get description of each option
+`git add -i`|interactive staging, enter ? to get description of each option
 
 SUBMODULE|Description
 ---------|-----------
