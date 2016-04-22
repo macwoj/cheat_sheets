@@ -39,6 +39,13 @@ if has("gui_running")
     set guifont=Courier_New:h20:cDEFAULT
   endif
 endif
+
+" jump to the beginning/end of a function that does not have a "{" in the first column
+map [[ ?{<CR>w99[{
+map ][ /}<CR>b99]}
+map ]] j0[[%/{<CR>
+map [] k$][%?}<CR>
+
 " Uncomment below to make screen not flash on error
 " set vb t_vb=""
 
