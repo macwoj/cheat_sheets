@@ -1,90 +1,132 @@
-<table style="width:100%">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+#p01 {
+    background-color: #F0F0F0;
+}
+
+td {
+    text-align:center; 
+    vertical-align:middle;
+}
+
+small { 
+    font-size: x-small;
+}
+
+</style>
+</head>
+<body>
+<table>
     <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>gg</b> <small>first line</small></td>
-    </tr>
-    <tr>
+        <td>
+            <b>d</b><br/><small>delete/cut</small>
+        </td>
+        <td>
+            <b>dd</b><br/><small>delete line</small>
+        </td>
         <td/><td/><td/><td/><td/>
-        <td><b>#</b> <small>find word under cursor</small></td>
-        <td><b>N</b> <small>prev text</small></td>
-        <td bgcolor="#F0F0F0"><b>?text</b> <small>find text</small></td>
+        <td id="p01"><b>gg</b><br/><small>first line</small></td>
     </tr>
     <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>C-b</b> <small>page</small></td>
-        <td><b>C-u</b> <small>1/2 page</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>H</b> <small>screen</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>{</b> <small>paragraph</small></td>
-        <td><b>(</b> <small>sentence</small></td>
-    </tr>
-    <tr>
-        <td/>
-        <td/>
-        <td><b>,</b> <small>prev x</small></td>
-        <td/>
-        <td><b>B</b> <small>delim word</small></td>
-        <td><b>gE</b> <small>delim end</small></td>
-        <td/>
-        <td bgcolor="#F0F0F0"><b>k</b> <small>up</small></td>
-    </tr>
-    <tr bgcolor="#F0F0F0">
-        <td><b>0</b> <small>line</small><small></td>
-        <td><b>^</b> <small>non-blank<small></td>
-        <td><b>Fx</b> <small>before x<small></td>
-        <td><b>Tx</b> <small>after x<small></td>
-        <td><b>b</b> <small>word<small></td>
-        <td><b>ge</b> <small>word end<small></td>
-        <td><b>h</b> <small>left<small></td>
-        <td><b>M</b> <small>curson in screen<br><b>zz</b> <small>screen on curson<small></td>
-        <td><b>l</b> <small>right<small></td>
-        <td><b>e</b> <small>word end<small></td>
-        <td><b>w</b> <small>word<small></td>
-        <td><b>tx</b> <small>before x<small></td>
-        <td><b>fx</b> <small>find x<small></td>
-        <td><b>$</b> <small>line<small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>j</b> <small>down</small></td>
-        <td/>
-        <td><b>E</b> <small>delim end<small></td>
-        <td><b>W</b> <small>delim word<small></td>
-        <td/>
-        <td><b>;</b> <small>next x<small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/>
-        <td><b>)</b> <small>sentence</small></td>
-        <td bgcolor="#F0F0F0"><b>}</b> <small>paragraph</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>L</b> <small>screen</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/>
-        <td><b>C-d</b> <small>1/2 page</small></td>
-        <td bgcolor="#F0F0F0"><b>C-f</b> <small>page</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>/text</b> <small>find text</small></td>
-        <td><b>n</b> <small>next text</small></td>
-        <td><b>*</b> <small>find word under cursor</small></td>
-    </tr>
-    <tr>
-        <td><b>''</b> <small>last location</small></td>
-        <td><b>'.</b> <small>last edit</small></td>
-        <td><b>#gg</b> <small>line #</small></td>
-        <td><b>%</b> <small>matching bracket</small></td>
+        <td>
+            <b>y</b><br/><small>yank</small>
+        </td>
+        <td>
+            <b>yy</b><br/><small>yank line</small>
+        </td>
         <td/><td/><td/>
-        <td bgcolor="#F0F0F0"><b>G</b> <small>last line</small></td>
+        <td><b>#</b><br/><small>find word under cursor</small></td>
+        <td><b>N</b><br/><small>prev text</small></td>
+        <td id="p01"><b>?text</b><br/><small>find text</small></td>
+    </tr>
+    <tr>
+        <td>
+            <b>c</b><br/><small>change (enter insert mode after)</small>
+        </td>
+        <td>
+            <b>cc</b><br/><small>change line</small>
+        </td>
+        <td/><td/><td/><td/><td/>
+        <td id="p01"><b>C-b</b><br/><small>page</small></td>
+        <td><b>C-u</b><br/><small>1/2 page</small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td id="p01"><b>H</b><br/><small>screen</small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td id="p01"><b>{</b><br/><small>empty line</small></td>
+        <td><b>(</b><br/><small>sentence</small></td>
+    </tr>
+    <tr>
+        <td/>
+        <td/>
+        <td><b>,</b><br/><small>prev x</small></td>
+        <td/>
+        <td><b>B</b><br/><small>WORD (non-blank)</small></td>
+        <td><b>gE</b><br/><small>WORD (non-blank) end</small></td>
+        <td/>
+        <td id="p01"><b>k</b><br/><small>up</small></td>
+    </tr>
+    <tr id="p01">
+        <td><b>0</b><br/><small>line</small><small></td>
+        <td><b>^</b><br/><small>non-blank<small></td>
+        <td><b>Fx</b><br/><small>before x<small></td>
+        <td><b>Tx</b><br/><small>after x<small></td>
+        <td><b>b</b><br/><small>word<small></td>
+        <td><b>ge</b><br/><small>word end<small></td>
+        <td><b>h</b><br/><small>left<small></td>
+        <td><b>M</b><br/><small>curson in screen<br><b>zz</b><br/><small>screen on curson<small></td>
+        <td><b>l</b><br/><small>right<small></td>
+        <td><b>e</b><br/><small>word end<small></td>
+        <td><b>w</b><br/><small>word<small></td>
+        <td><b>tx</b><br/><small>before x<small></td>
+        <td><b>fx</b><br/><small>find x<small></td>
+        <td><b>$</b><br/><small>line<small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td id="p01"><b>j</b><br/><small>down</small></td>
+        <td/>
+        <td><b>E</b><br/><small>WORD (non-blank) end<small></td>
+        <td><b>W</b><br/><small>WORD (non-blank)<small></td>
+        <td/>
+        <td><b>;</b><br/><small>next x<small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/>
+        <td><b>)</b><br/><small>sentence</small></td>
+        <td id="p01"><b>}</b><br/><small>empty line</small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td id="p01"><b>L</b><br/><small>screen</small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/>
+        <td><b>C-d</b><br/><small>1/2 page</small></td>
+        <td id="p01"><b>C-f</b><br/><small>page</small></td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td id="p01"><b>/text</b><br/><small>find text</small></td>
+        <td><b>n</b><br/><small>next text</small></td>
+        <td><b>*</b><br/><small>find word under cursor</small></td>
+    </tr>
+    <tr>
+        <td><b>''</b><br/><small>last location</small></td>
+        <td><b>'.</b><br/><small>last edit</small></td>
+        <td><b>#gg</b><br/><small>line #</small></td>
+        <td><b>%</b><br/><small>matching bracket</small></td>
+        <td/><td/><td/>
+        <td id="p01"><b>G</b><br/><small>last line</small></td>
     </tr>
     <tr>
         <td><br/><td>
@@ -96,8 +138,10 @@
         <td/>
         <td/>
         <td/>
-        <td/>
-        <td bgcolor="#F0F0F0"><b>O</b> <small>insert line</small></td>
+        <td>
+            <b>s</b><br/><small>delete char and insert</small><br/>
+        </td>
+        <td id="p01"><b>O</b><br/><small>insert line</small></td>
     </tr>
     <tr >
         <td/>
@@ -105,16 +149,15 @@
         <td/>
         <td/>
         <td/>
-        <td bgcolor="#F0F0F0"><b>I</b> <small>insert line start</small></td>
-        <td bgcolor="#F0F0F0"><b>i</b> <small>insert</small></td>
+        <td id="p01"><b>I</b><br/><small>insert line start</small></td>
+        <td id="p01"><b>i</b><br/><small>insert</small></td>
         <td>
-            <b>s</b> <small>delete char and insert</small><br/>
-            <b>S</b> <small>delete line and insert</small>
+            <b>J</b><br/><small>join with line (lines in visual)</small>
         </td>
-        <td bgcolor="#F0F0F0"><b>a</b> <small>insert after</small></td>
-        <td><b>cw</b> <small>delete to word end and insert</small></td>
-        <td><b>C</b> <small>delete to line end and insert</small></td>
-        <td bgcolor="#F0F0F0"><b>A</b> <small>insert line end</small></td>
+        <td id="p01"><b>a</b><br/><small>insert after</small></td>
+        <td><b>D</b><br/><small>delete to line end</small></td>
+        <td><b>C</b><br/><small>delete to line end and insert</small></td>
+        <td id="p01"><b>A</b><br/><small>insert line end</small></td>
     </tr>
     <tr>
         <td/>
@@ -123,7 +166,30 @@
         <td/>
         <td/>
         <td/>
+        <td>
+            <b>r</b><br/><small>replace char</small>
+        </td>
+        <td id="p01"><b>o</b><br/><small>insert line</small></td>
+    </tr>
+    <tr>
         <td/>
-        <td bgcolor="#F0F0F0"><b>o</b> <small>insert line</small></td>
+        <td/>
+        <td/>
+        <td/>
+        <td/>
+        <td/>
+        <td>
+            <b>x</b><br/><small>delete char</small><br/>
+        </td>
     </tr>
 </table>
+</body>
+:%s/old/new/g - replace all old with new throughout file
+:%s/old/new/gc - replace all old with new throughout file with confirmations
+:noh - remove highlighting of search matches
+<< shift left
+>> shift right
+:{range}sort u
+You could create a range in advance, such as 'a,. (from mark 'a' to the current line) or you could create one on-the-fly using visual selection by pressing ':' in visual mode, after selecting the text you wish to sort, to get a range of '<,'> on the command line.
+:sort n numeric sort
+</html>
