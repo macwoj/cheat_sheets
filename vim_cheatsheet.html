@@ -184,8 +184,21 @@ small {
     </tr>
 </table>
 </body>
+:%s/foo/bar/g Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
+:s/foo/bar/g Find each occurrence of 'foo' (in the current line only), and replace it with 'bar'.
+:%s/foo/bar/gc Change each 'foo' to 'bar', but ask for confirmation first.
+:%s/foo/bar/gci Change each 'foo' (case insensitive due to the i flag) to 'bar'; ask for confirmation
 :%s/old/new/g - replace all old with new throughout file
 :%s/old/new/gc - replace all old with new throughout file with confirmations
+:5,12s/foo/bar/g Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
+:'a,'bs/foo/bar/g Change each 'foo' to 'bar' for all lines from mark a to mark b inclusive
+:'<,'>s/foo/bar/g  change each 'foo' to 'bar' for all lines within a visual selection
+:.,$s/foo/bar/g Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive.
+:.,+2s/foo/bar/g	Change each 'foo' to 'bar' for the current line (.) and the two next lines (+2).
+:g/^baz/s/foo/bar/g	Change each 'foo' to 'bar' in each line starting with 'baz'.
+
+The g flag means global – each occurrence in the line is changed, rather than just the first.
+
 :noh - remove highlighting of search matches
 << shift left
 >> shift right
