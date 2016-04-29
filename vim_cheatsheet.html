@@ -25,12 +25,19 @@ small {
 <table>
     <tr>
         <td>
-            <b>d</b><br/><small>delete/cut</small>
+            [operator][cout][motion]
+            <b>d</b> <small>delete/cut</small>
         </td>
         <td>
             <b>dd</b><br/><small>delete line</small>
         </td>
-        <td/><td/><td/><td/><td/>
+        <td>
+            <b>P</b><br/><small>paste before</small>
+        </td>
+        <td>
+            <b>p</b><br/><small>paste after</small>
+        </td>
+        <td/><td/><td/>
         <td id="p01"><b>gg</b><br/><small>first line</small></td>
     </tr>
     <tr>
@@ -235,6 +242,5 @@ Pasting in insert mode
 Cut/Yank/Paste from system clipboard
     "+{operator}
     
-[operator][cout][motion]
     [operator] -> y,d,c,gU(make upper case),gu(make lower case),~(switch case),<(shift left),>(shift right),=(smart indent)
 </html>
