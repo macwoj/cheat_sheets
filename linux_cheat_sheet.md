@@ -1,6 +1,7 @@
 Command|Description
 ----|-----------
 `du -h --max-depth=1 | sort -h`|list sorted folder size
+`find . -name '*.o' -delete`| delete all .o files recursively from current directory
 
 cat /etc/release
 tar -xzf <tar.gz>
