@@ -38,7 +38,8 @@ MISC|Description
 `git push origin develop`|push local develop branch to remote develop
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
 `git remote show origin`|show info about remote, show repo URL
-`git remote add local ../otherrepo`|add remote branch from local repo in different directory
+`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
+`git remote remove local`|remove remote branch local
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
 `git rev-parse HEAD`|get sha of current commit
