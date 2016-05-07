@@ -28,19 +28,21 @@ MISC|Description
 `git checkout tags/<tag_name>`|
 `git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git cherry-pick sha`|Apply the commit with sha to the current branch 
+`git cherry-pick ebe6942^..905e279`|Apply the range of commits to the current branch that is inclusive of both range endpoints 
 `git commit --amend`|change last commit message
-git config --global credential.helper cache|no git password retyping
-git diff HEAD HEAD~1|compare HEAD to commit right before HEAD
-git fetch --all|Download objects and refs from remote
-git fetch --all; git branch -vv|update git cache
-git push origin mwojton:fmlrefactor|push local mwojton branch to remote fmlrefactor
-git push origin develop|push local develop branch to remote develop
-git push --force origin develop|push the local branch ptr to remote CAREFUL !!!!!
-git remote show origin|show info about remote, show repo URL
-git remote add local ../otherrepo|add remote branch from local repo in different directory
-git reset --hard HEAD|discard any changes
-git reset --hard HEAD~1|discard last commit
-git rev-parse HEAD|get sha of current commit
+`git config --global credential.helper cache`|no git password retyping
+`git diff HEAD HEAD~1`|compare HEAD to commit right before HEAD
+`git fetch --all`|Download objects and refs from remote
+`git fetch --all; git branch -vv`|update git cache
+`git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
+`git push origin develop`|push local develop branch to remote develop
+`git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
+`git remote show origin`|show info about remote, show repo URL
+`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
+`git remote remove local`|remove remote branch local
+`git reset --hard HEAD`|discard any changes
+`git reset --hard HEAD~1`|discard last commit
+`git rev-parse HEAD`|get sha of current commit
 
 GUI|Description
 ---|-----------
@@ -55,11 +57,11 @@ STAGING|Description
 
 SUBMODULE|Description
 ---------|-----------
-git submodule foreach git pull|update all submodules to latest
-git submodule update --init --recursive|update to the checked in sha
-git submodule status|show  sha's of all the submodules
-git pull origin develop|update submodule to latest develop branch, do this from submodule folder
-git submodule sync|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
+`git submodule foreach git pull`|update all submodules to latest
+`git submodule update --init --recursive`|update to the checked in sha
+`git submodule status`|show  sha's of all the submodules
+`git pull origin develop`|update submodule to latest develop branch, do this from submodule folder
+`git submodule sync`|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
 
 STASH|Description
 -----|-----------
