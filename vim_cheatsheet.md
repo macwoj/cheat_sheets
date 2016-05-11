@@ -6,7 +6,7 @@ VIM|Description|Reference
 `C-v C-r`| in insert mode adds tab char
 `:retab`|fix tabs to spaces
 
-### My remaps (note <leader> is set to \)
+### My remaps (note <leader> is set to \\)
 VIM|Description|Reference
 ---|-----------|---------
 `\n`|toggle relative number
