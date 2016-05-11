@@ -6,6 +6,11 @@ VIM|Description|Reference
 `C-v C-r`| in insert mode adds tab char
 `:retab`|fix tabs to spaces
 
+###
+VIM|Description|Reference
+---|-----------|---------
+C-w ghjk|move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR
+
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
 ---|-----------|---------
