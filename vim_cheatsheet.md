@@ -5,7 +5,13 @@ VIM|Description|Reference
 **rx**|`replace all chars in selection with x, this works for visual block mode too`|
 `C-v C-r`| in insert mode adds tab char
 `:retab`|fix tabs to spaces
-`C-n`|toggle relative number
+
+### My remaps (note <leader> is set to \)
+VIM|Description|Reference
+---|-----------|---------
+`\n`|toggle relative number
+`\t`|toggle nerd tree
+`\c`|toggle (c)tag bar
 
 [{
 ]}
