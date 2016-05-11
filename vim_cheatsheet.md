@@ -9,7 +9,7 @@ VIM|Description|Reference
 ###
 VIM|Description|Reference
 ---|-----------|---------
-C-w ghjk|move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR
+`C-w ghjk`|move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR
 
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
