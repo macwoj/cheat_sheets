@@ -11,7 +11,7 @@ VIM|Description|Reference
 ---|-----------|---------
 `\n`|toggle relative number
 `\t`|toggle nerd tree
-`\c`|toggle (c)tag bar
+`\b`|toggle (c)tag bar
 
 [{
 ]}
