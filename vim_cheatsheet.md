@@ -1,8 +1,8 @@
 ### Visual Mode
 VIM|Description|Reference
 ---|-----------|---------
-**v**|Enter Visual mode|
-**rx**|`replace all chars in selection with x, this works for visual block mode too`|
+`v`|Enter Visual mode|
+`rx`|replace all chars in selection with x, this works for visual block mode too|
 `C-v C-r`| in insert mode adds tab char
 `:retab`|fix tabs to spaces
 
