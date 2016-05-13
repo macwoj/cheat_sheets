@@ -15,9 +15,9 @@ VIM|Description|Reference
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
 ---|-----------|---------
-`\n`|toggle relative number
-`\t`|toggle nerd tree
-`\b`|toggle (c)tag bar
+`\n`|toggle relative **[n]**umber
+`\t`|toggle nerd **[t]**ree
+`\b`|toggle (c)tag **[b]**ar
 
 [{
 ]}
