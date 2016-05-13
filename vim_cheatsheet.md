@@ -24,6 +24,10 @@ VIM|Description|Reference
 `\b`|CtrlP **[b]**uffer
 `\m`|CtrlP **[m]**ixed
 `\r`|CtrlP most **[r]**ecently used
+`[q`|:cprevious|
+`]q`|:cnext|
+`[Q`|:cfirst|
+`]Q`|:clast|
 [{
 ]}
 [(
