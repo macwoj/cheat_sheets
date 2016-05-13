@@ -24,10 +24,16 @@ VIM|Description|Reference
 `\b`|CtrlP **[b]**uffer
 `\m`|CtrlP **[m]**ixed
 `\r`|CtrlP most **[r]**ecently used
+### Plugins
+VIM|Description|Reference
+---|-----------|---------
+`C-p`|CtrlP
 `[q`|:cprevious|
 `]q`|:cnext|
 `[Q`|:cfirst|
 `]Q`|:clast|
+`:Dispatch make_script`|start build
+
 [{
 ]}
 [(
