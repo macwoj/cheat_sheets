@@ -17,8 +17,9 @@ VIM|Description|Reference
 ---|-----------|---------
 `\n`|toggle relative **[n]**umber
 `\t`|toggle nerd **[t]**ree
-`\b`|toggle (c)tag **[b]**ar
-
+`\c`|toggle **[c]**tag bar
+`\b`|CtrlP buffer
+`\m`|CtrlP mixed
 [{
 ]}
 [(
