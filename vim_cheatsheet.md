@@ -10,6 +10,7 @@ VIM|Description|Reference
 VIM|Description|Reference
 ---|-----------|---------
 `C-w ghjk`|move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR
+`:so ~/.vimrc`|Reload vimrc
 
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
