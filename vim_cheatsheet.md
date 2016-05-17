@@ -15,6 +15,7 @@ VIM|Description|Reference
 `C-w ghjk`|move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR
 `:so ~/.vimrc`|Reload vimrc
 `:! wc %`|run external command on current file
+`vim -d file1 file2`|diff 2 files
 
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
