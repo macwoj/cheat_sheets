@@ -3,7 +3,7 @@ VIM|Description|Reference
 ---|-----------|---------
 `v`|Enter Visual mode|
 `rx`|replace all chars in selection with x, this works for visual block mode too|
-`C-v C-r`| in insert mode adds tab char
+`C-v <tab>`| in insert mode adds tab char
 `:retab`|fix tabs to spaces
 `~`|toggle case
 `u`|to lower case
