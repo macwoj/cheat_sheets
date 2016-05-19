@@ -16,6 +16,8 @@ VIM|Description|Reference
 `:so ~/.vimrc`|Reload vimrc
 `:! wc %`|run external command on current file
 `vim -d file1 file2`|diff 2 files
+`:noh`|turn off search highlight
+
 
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
@@ -31,6 +33,8 @@ VIM|Description|Reference
 `\av`|**[v]**ertical splits and switches
 `\at`|new **[t]**ab and switches
 `\an`|cycles through **[n]**ext match
+`\d`|dispatch and make current file
+`\w`|toggle word wrap
 
 ### Plugins
 VIM|Description|Reference
