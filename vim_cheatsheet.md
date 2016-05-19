@@ -26,6 +26,12 @@ VIM|Description|Reference
 `\b`|CtrlP **[b]**uffer
 `\m`|CtrlP **[m]**ixed
 `\r`|CtrlP most **[r]**ecently used
+`\a`|switches to the header file corresponding to the current file being edited (or vise versa)
+`\as`|**[s]**plits and switches
+`\av`|**[v]**ertical splits and switches
+`\at`|new **[t]**ab and switches
+`\an`|cycles through **[n]**ext match
+
 ### Plugins
 VIM|Description|Reference
 ---|-----------|---------
