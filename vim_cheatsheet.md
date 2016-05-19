@@ -36,6 +36,14 @@ VIM|Description|Reference
 `]Q`|:clast|
 `:Dispatch make_script`|start build
 
+Profiling
+:profile start profile.log
+:profile func *
+:profile file *
+" At this point do slow actions
+:profile pause
+:noautocmd qall!
+
 [{
 ]}
 [(
