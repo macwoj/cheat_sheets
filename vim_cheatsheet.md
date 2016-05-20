@@ -17,6 +17,8 @@ VIM|Description|Reference
 `:! wc %`|run external command on current file
 `vim -d file1 file2`|diff 2 files
 `:noh`|turn off search highlight
+`:sp`|horizontal split
+`:vsp`|vertical split
 
 
 ### My remaps (note \<leader\> is set to \\)
