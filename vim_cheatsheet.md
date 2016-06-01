@@ -44,6 +44,8 @@ VIM|Description|Reference
 `\an`|cycles through **[n]**ext match
 `\d`|dispatch and make current file
 `\w`|toggle word wrap
+`\\w`|easy motion word forward
+`\\b`|easy motion word back
 
 ### Plugins
 VIM|Description|Reference
