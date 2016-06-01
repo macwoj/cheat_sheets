@@ -46,7 +46,7 @@ VIM|Description|Reference
 `\w`|toggle word wrap
 `\\w`|easy motion word forward
 `\\b`|easy motion word back
-`[count]\cn`|Comment out the current line or text selected in visual mode. Forces nesting
+`[count]\cc`|Comment out the current line or text selected in visual mode
 `[count]\cu`|Uncomments the selected line(s)
 
 ### Plugins
