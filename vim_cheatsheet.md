@@ -24,6 +24,7 @@ VIM|Description|Reference
 VIM|Description|Reference
 ---|-----------|---------
 `b <filename>`|open buffer with filename
+`b <number>`|open buffer with number
 `bd`|close current buffer
 `bn`|next buffer
 `bp`|prev buffer
