@@ -33,7 +33,7 @@ VIM|Description|Reference
 ---|-----------|---------
 `\n`|toggle relative **[n]**umber
 `\t`|toggle nerd **[t]**ree
-`\c`|toggle **[c]**tag bar
+`\e`|toggle **[e]**xuberant ctag bar
 `\b`|CtrlP **[b]**uffer
 `\m`|CtrlP **[m]**ixed
 `\r`|CtrlP most **[r]**ecently used
