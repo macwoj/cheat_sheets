@@ -20,6 +20,13 @@ VIM|Description|Reference
 `:sp`|horizontal split
 `:vsp`|vertical split
 
+##buffer
+VIM|Description|Reference
+---|-----------|---------
+`b <filename>`|open buffer with filename
+`bd`|close current buffer
+`bn`|next buffer
+`bp`|prev buffer
 
 ### My remaps (note \<leader\> is set to \\)
 VIM|Description|Reference
