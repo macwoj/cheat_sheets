@@ -2,21 +2,68 @@
 <html>
 <head>
 <style>
-table{
-    table-layout: fixed;
+body {
+    display: inline-block;
+    min-width: 4000px;
+    box-sizing: border-box;
+	background-color: #FFFFFF;
 }
+
 #p01 {
     background-color: #F0F0F0;
 }
 
-td {
-    width: 250px;
-    text-align:center; 
-    vertical-align:middle;
+table.fixed {
+	table-layout:fixed;
 }
 
-small { 
+table.fixed td {
+    width: 100;
+    height: 75;
+    text-align:center;
+    vertical-align:middle;
+    line-height: 0.8;
+}
+
+
+table.fixedlist { table-layout:fixed; }
+table.fixedlist td {
+    width: 75px;
+    height: 55px;
+    text-align:center;
+    vertical-align:top;
+    line-height: 0.8;
+}
+
+table.fixedlist tr {
+    height: 50px;
+}
+
+td.listlcol {
+    text-align:left;
+    vertical-align:center;
+}
+
+td.listrcol {
+    width: 500px;
+    text-align:left;
+    vertical-align:center;
+}
+small {
     font-size: x-small;
+}
+
+red {
+    color:#FF0000;
+}
+
+td.op {
+    color:#FF0000
+}
+
+vimact {
+	font-weight: 900;
+	font-size: 150%;
 }
 
 </style>
@@ -25,224 +72,301 @@ small {
 <table>
     <tr>
         <td>
-            [operator][cout][motion]
-            <b>d</b> <small>delete/cut</small>
+            <table class="fixed">
+                <tr>
+                    <td rowspan=5 colspan=5>
+                        <table class="fixedlist">
+                            <tr>
+                                <td colspan=3><vimact><red>[operator]</red>[count][motion]</vimact></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <red><vimact>d</vimact></red><br/><small>delete/cut</small>
+                                </td>
+                                <td>
+                                    <vimact>dd</vimact><br/><small>delete line</small>
+                                </td>
+                                <td>
+                                    <vimact>P</vimact><br/><small>paste before</small>
+                                </td>
+                                <td>
+                                    <vimact>p</vimact><br/><small>paste after</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <red><vimact>y</vimact></red><br/><small>yank</small>
+                                </td>
+                                <td>
+                                    <vimact>yy</vimact><br/><small>yank line</small>
+                                </td>
+                                <td>
+                                    <vimact>"[r]<red>[op]</red></vimact><br/><small>action into/from register</small>
+                                </td>
+                                <td>
+                                    <vimact>"+<red>[op]</red></vimact><br/><small>system clipboard</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <red><vimact>c</vimact></red><br/><small>change (enter insert mode)</small>
+                                </td>
+                                <td>
+                                    <vimact>cc</vimact><br/><small>change line</small>
+                                </td>
+                                <td>
+                                    <vimact>C-r "</vimact><br/><small>paste<br/>(insert mode)</small>
+                                </td>
+                                <td>
+                                    <vimact>C-r *</vimact><br/><small>paste system clipboard<br/>(insert mode)</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <red><vimact><</vimact></red> <small>shift left</small><br/>
+                                    <red><vimact>></vimact></red> <small>shift right</small><br/>
+                                    <red><vimact>=</vimact></red> <small>indent</small>
+                                </td>
+                                <td>
+                                    <vimact><<</vimact> <small>shift line left</small><br/>
+                                    <vimact>>></vimact> <small>shift line right</small><br/>
+                                    <vimact>==</vimact> <small>indent line</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <red><vimact>~</vimact></red> <small>swap case</small><br/>
+                                    <red><vimact>gu</vimact></red> <small>lowercase</small><br/>
+                                    <red><vimact>gU</vimact></red> <small>uppercase</small><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td/><td/>
+                    <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
+                </tr>
+                <tr>
+                    <td><vimact>#</vimact><br/><small>find word under cursor</small></td>
+                    <td><vimact>N</vimact><br/><small>prev text</small></td>
+                    <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
+                </tr>
+                <tr>
+                    <td/><td/>
+                    <td id="p01"><vimact>C-b</vimact><br/><small>page</small></td>
+                    <td><vimact>C-u</vimact><br/><small>1/2 page</small></td>
+                </tr>
+                <tr>
+                    <td/><td/>
+                    <td id="p01"><vimact>H</vimact><br/><small>cursor in screen</small></td>
+                    <td><vimact>zt</vimact><br/><small>screen on cursor</small></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td><vimact>[(</vimact><br/><small>enclosing (</small></td>
+                    <td id="p01"><vimact>[[</vimact><br/><small>enclosing {</small></td>
+                    <td><vimact>{</vimact><br/><small>empty line</small></td>
+                    <td><vimact>(</vimact><br/><small>sentence</small></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td/>
+                    <td><vimact>,</vimact><br/><small>prev x</small></td>
+                    <td/>
+                    <td><vimact>B</vimact><br/><small>WORD (non-blank)</small></td>
+                    <td><vimact>gE</vimact><br/><small>WORD (non-blank) end</small></td>
+                    <td/>
+                    <td id="p01"><vimact>k</vimact><br/><small>up</small></td>
+                </tr>
+                <tr id="p01">
+                    <td><vimact>0</vimact><br/><small>line</small><small></td>
+                    <td><vimact>^</vimact><br/><small>non-blank<small></td>
+                    <td><vimact>Fx</vimact><br/><small>before x<small></td>
+                    <td><vimact>Tx</vimact><br/><small>after x<small></td>
+                    <td><vimact>b</vimact><br/><small>word<small></td>
+                    <td><vimact>ge</vimact><br/><small>word end<small></td>
+                    <td><vimact>h</vimact><br/><small>left<small></td>
+                    <td><vimact>M</vimact><br/><small>curson in screen<br><vimact>zz</vimact><br/><small>screen on curson<small></td>
+                    <td><vimact>l</vimact><br/><small>right<small></td>
+                    <td><vimact>e</vimact><br/><small>word end<small></td>
+                    <td><vimact>w</vimact><br/><small>word<small></td>
+                    <td><vimact>tx</vimact><br/><small>before x<small></td>
+                    <td><vimact>fx</vimact><br/><small>find x<small></td>
+                    <td><vimact>$</vimact><br/><small>line<small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>j</vimact><br/><small>down</small></td>
+                    <td/>
+                    <td><vimact>E</vimact><br/><small>WORD (non-blank) end<small></td>
+                    <td><vimact>W</vimact><br/><small>WORD (non-blank)<small></td>
+                    <td/>
+                    <td><vimact>;</vimact><br/><small>next x<small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/>
+                    <td><vimact>)</vimact><br/><small>sentence</small></td>
+                    <td><vimact>}</vimact><br/><small>empty line</small></td>
+                    <td id="p01"><vimact>]]</vimact><br/><small>enclosing }<small></td>
+                    <td><vimact>])</vimact><br/><small>enclosing )<small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/>
+                    <td><vimact>zb</vimact><br/><small>screen on cursor</small></td>
+                    <td id="p01"><vimact>L</vimact><br/><small>cursor in screen</small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/>
+                    <td><vimact>C-d</vimact><br/><small>1/2 page</small></td>
+                    <td id="p01"><vimact>C-f</vimact><br/><small>page</small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>/text</vimact><br/><small>find text</small></td>
+                    <td><vimact>n</vimact><br/><small>next text</small></td>
+                    <td><vimact>*</vimact><br/><small>find word under cursor</small></td>
+                </tr>
+                <tr>
+                    <td><vimact>''</vimact><br/><small>last location</small></td>
+                    <td><vimact>'.</vimact><br/><small>last edit</small></td>
+                    <td><vimact>#gg</vimact><br/><small>line #</small></td>
+                    <td><vimact>%</vimact><br/><small>matching bracket</small></td>
+                    <td/><td/><td/>
+                    <td id="p01"><vimact>G</vimact><br/><small>last line</small></td>
+                </tr>
+                <tr>
+                    <td><br/><td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td>
+                        <vimact>s</vimact><br/><small>delete char and insert</small><br/>
+                    </td>
+                    <td id="p01"><vimact>O</vimact><br/><small>insert line</small></td>
+                </tr>
+                <tr >
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td id="p01"><vimact>I</vimact><br/><small>insert line start</small></td>
+                    <td id="p01"><vimact>i</vimact><br/><small>insert</small></td>
+                    <td>
+                        <vimact>J</vimact><br/><small>join with line (lines in visual)</small>
+                    </td>
+                    <td id="p01"><vimact>a</vimact><br/><small>insert after</small></td>
+                    <td><vimact>D</vimact><br/><small>delete to line end</small></td>
+                    <td><vimact>C</vimact><br/><small>delete to line end and insert</small></td>
+                    <td id="p01"><vimact>A</vimact><br/><small>insert line end</small></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td>
+                        <vimact>r</vimact><br/><small>replace char</small>
+                    </td>
+                    <td id="p01"><vimact>o</vimact><br/><small>insert line</small></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td>
+                        <vimact>x</vimact><br/><small>delete char</small><br/>
+                    </td>
+                </tr>
+            </table>
+
         </td>
         <td>
-            <b>dd</b><br/><small>delete line</small>
-        </td>
-        <td>
-            <b>P</b><br/><small>paste before</small>
-        </td>
-        <td>
-            <b>p</b><br/><small>paste after</small>
-        </td>
-        <td/><td/><td/>
-        <td id="p01"><b>gg</b><br/><small>first line</small></td>
-    </tr>
-    <tr>
-        <td>
-            <b>y</b><br/><small>yank</small>
-        </td>
-        <td>
-            <b>yy</b><br/><small>yank line</small>
-        </td>
-        <td/><td/><td/>
-        <td><b>#</b><br/><small>find word under cursor</small></td>
-        <td><b>N</b><br/><small>prev text</small></td>
-        <td id="p01"><b>?text</b><br/><small>find text</small></td>
-    </tr>
-    <tr>
-        <td>
-            <b>c</b><br/><small>change (enter insert mode after)</small>
-        </td>
-        <td>
-            <b>cc</b><br/><small>change line</small>
-        </td>
-        <td/><td/><td/><td/><td/>
-        <td id="p01"><b>C-b</b><br/><small>page</small></td>
-        <td><b>C-u</b><br/><small>1/2 page</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td id="p01"><b>H</b><br/><small>cursor in screen</small></td>
-        <td><b>zt</b><br/><small>screen on cursor</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/>
-        <td><b>[[</b><br/><small>find {</small></td>
-        <td><b>[]</b><br/><small>find }</small></td>
-        <td id="p01"><b>{</b><br/><small>empty line</small></td>
-        <td><b>(</b><br/><small>sentence</small></td>
-    </tr>
-    <tr>
-        <td/>
-        <td/>
-        <td><b>,</b><br/><small>prev x</small></td>
-        <td/>
-        <td><b>B</b><br/><small>WORD (non-blank)</small></td>
-        <td><b>gE</b><br/><small>WORD (non-blank) end</small></td>
-        <td/>
-        <td id="p01"><b>k</b><br/><small>up</small></td>
-    </tr>
-    <tr id="p01">
-        <td><b>0</b><br/><small>line</small><small></td>
-        <td><b>^</b><br/><small>non-blank<small></td>
-        <td><b>Fx</b><br/><small>before x<small></td>
-        <td><b>Tx</b><br/><small>after x<small></td>
-        <td><b>b</b><br/><small>word<small></td>
-        <td><b>ge</b><br/><small>word end<small></td>
-        <td><b>h</b><br/><small>left<small></td>
-        <td><b>M</b><br/><small>curson in screen<br><b>zz</b><br/><small>screen on curson<small></td>
-        <td><b>l</b><br/><small>right<small></td>
-        <td><b>e</b><br/><small>word end<small></td>
-        <td><b>w</b><br/><small>word<small></td>
-        <td><b>tx</b><br/><small>before x<small></td>
-        <td><b>fx</b><br/><small>find x<small></td>
-        <td><b>$</b><br/><small>line<small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td id="p01"><b>j</b><br/><small>down</small></td>
-        <td/>
-        <td><b>E</b><br/><small>WORD (non-blank) end<small></td>
-        <td><b>W</b><br/><small>WORD (non-blank)<small></td>
-        <td/>
-        <td><b>;</b><br/><small>next x<small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/>
-        <td><b>)</b><br/><small>sentence</small></td>
-        <td id="p01"><b>}</b><br/><small>empty line</small></td>
-        <td><b>]]</b><br/><small>find }</small></td>
-        <td><b>][</b><br/><small>find {</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/>
-        <td><b>zb</b><br/><small>screen on cursor</small></td>
-        <td id="p01"><b>L</b><br/><small>cursor in screen</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/>
-        <td><b>C-d</b><br/><small>1/2 page</small></td>
-        <td id="p01"><b>C-f</b><br/><small>page</small></td>
-    </tr>
-    <tr>
-        <td/><td/><td/><td/><td/><td/><td/>
-        <td id="p01"><b>/text</b><br/><small>find text</small></td>
-        <td><b>n</b><br/><small>next text</small></td>
-        <td><b>*</b><br/><small>find word under cursor</small></td>
-    </tr>
-    <tr>
-        <td><b>''</b><br/><small>last location</small></td>
-        <td><b>'.</b><br/><small>last edit</small></td>
-        <td><b>#gg</b><br/><small>line #</small></td>
-        <td><b>%</b><br/><small>matching bracket</small></td>
-        <td/><td/><td/>
-        <td id="p01"><b>G</b><br/><small>last line</small></td>
-    </tr>
-    <tr>
-        <td><br/><td>
-    </tr>
-    <tr>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td>
-            <b>s</b><br/><small>delete char and insert</small><br/>
-        </td>
-        <td id="p01"><b>O</b><br/><small>insert line</small></td>
-    </tr>
-    <tr >
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td id="p01"><b>I</b><br/><small>insert line start</small></td>
-        <td id="p01"><b>i</b><br/><small>insert</small></td>
-        <td>
-            <b>J</b><br/><small>join with line (lines in visual)</small>
-        </td>
-        <td id="p01"><b>a</b><br/><small>insert after</small></td>
-        <td><b>D</b><br/><small>delete to line end</small></td>
-        <td><b>C</b><br/><small>delete to line end and insert</small></td>
-        <td id="p01"><b>A</b><br/><small>insert line end</small></td>
-    </tr>
-    <tr>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td>
-            <b>r</b><br/><small>replace char</small>
-        </td>
-        <td id="p01"><b>o</b><br/><small>insert line</small></td>
-    </tr>
-    <tr>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td>
-            <b>x</b><br/><small>delete char</small><br/>
+            <table>
+                <tr><td class="listlcol">v</td><td class="listrcol">enter Visual Mode</td></tr>
+                <tr><td class="listlcol">C-v</td><td class="listrcol">enter Visual Mode</td></tr>
+                <tr><td class="listlcol">rx</td><td class="listrcol">replace all chars in selection with x</td></tr>
+                <tr><td class="listlcol"></td><td class="listrcol"></td></tr>
+                <tr><td class="listlcol">C-v <tab></td><td class="listrcol"> in insert mode adds tab char</td></tr>
+                <tr><td class="listlcol">:retab</td><td class="listrcol">fix tabs to spaces</td></tr>
+                <tr><td class="listlcol">:so ~/.vimrc</td><td class="listrcol">Reload vimrc</td></tr>
+                <tr><td class="listlcol">:! wc %</td><td class="listrcol">run external command on current file</td></tr>
+                <tr><td class="listlcol">:noh</td><td class="listrcol">turn off search highlight</td></tr>
+                <tr><td class="listlcol">vim -d file1 file2</td><td class="listrcol">diff 2 files</td></tr>
+                <tr><td class="listlcol">%</td><td class="listrcol">in {range} will use whole file</td></tr>
+                <tr><td class="listlcol">:{range}sort u</td><td class="listrcol">sort and remove dubs</td></tr>
+                <tr><td class="listlcol">:{range}sort</td><td class="listrcol">sort</td></tr>
+                <tr><td class="listlcol">:{range}sort!</td><td class="listrcol">sort reverse</td></tr>
+                <tr><td class="listlcol">:{range}sort n</td><td class="listrcol">numeric sort</td></tr>
+                <tr><td class="listlcol">:s/foo/bar/g</td><td class="listrcol">Change each 'foo' to 'bar' in the current line.</td></tr>
+                <tr><td class="listlcol">:%s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all the lines., but ask for confirmation first.</td></tr>
+                <tr><td class="listlcol">:{range}s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all lines within a visual selection, but ask for confirmation first.</td></tr>
+                <tr><td class="listlcol">C-w ghjk</td><td class="listrcol">move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR</td></tr>
+                <tr><td class="listlcol">:sp</td><td class="listrcol">horizontal split</td></tr>
+                <tr><td class="listlcol">:vsp</td><td class="listrcol">vertical split</td></tr>
+                <tr><td class="listlcol">:b <filename></td><td class="listrcol">open buffer with filename</td></tr>
+                <tr><td class="listlcol">:b <number></td><td class="listrcol">open buffer with number</td></tr>
+                <tr><td class="listlcol">:bd</td><td class="listrcol">close current buffer</td></tr>
+                <tr><td class="listlcol">:bn</td><td class="listrcol">next buffer</td></tr>
+                <tr><td class="listlcol">:bp</td><td class="listrcol">prev buffer</td></tr>
+                <tr><td class="listlcol">\gf (Normal)</td><td class="listrcol">(global find) start empty Ag for cpp</td></tr>
+                <tr><td class="listlcol">\gf (Visual)</td><td class="listrcol">(global find) Ag with selection for cpp</td></tr>
+                <tr><td class="listlcol">\n</td><td class="listrcol">toggle relative **[n]**umber</td></tr>
+                <tr><td class="listlcol">\t</td><td class="listrcol">toggle nerd **[t]**ree</td></tr>
+                <tr><td class="listlcol">F8</td><td class="listrcol">toggle ctag bar</td></tr>
+                <tr><td class="listlcol">A</td></tr>
+                <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
+                <tr><td class="listlcol">\as</td><td class="listrcol">**[s]**plits and switches</td></tr>
+                <tr><td class="listlcol">\av</td><td class="listrcol">**[v]**ertical splits and switches</td></tr>
+                <tr><td class="listlcol">\at</td><td class="listrcol">new **[t]**ab and switches</td></tr>
+                <tr><td class="listlcol">\an</td><td class="listrcol">cycles through **[n]**ext match</td></tr>
+                <tr><td class="listlcol">\d</td><td class="listrcol">dispatch and make current file</td></tr>
+                <tr><td class="listlcol">\w</td><td class="listrcol">toggle word wrap</td></tr>
+                <tr><td class="listlcol">Easy Motion</td></tr>
+                <tr><td class="listlcol">\\w</td><td class="listrcol">easy motion word forward</td></tr>
+                <tr><td class="listlcol">\\b</td><td class="listrcol">easy motion word back</td></tr>
+                <tr><td class="listlcol">Nerd Commenter</td></tr>
+                <tr><td class="listlcol">[count]\cc</td><td class="listrcol">Comment out the current line or text selected in visual mode</td></tr>
+                <tr><td class="listlcol">[count]\cu</td><td class="listrcol">Uncomments the selected line(s)</td></tr>
+                <tr><td class="listlcol">Multiple cursors</td></tr>
+                <tr><td class="listlcol">C-n in Normal</td><td class="listrcol">highlights the current word under the cursor in Visual mode/finds next</td></tr>
+                <tr><td class="listlcol">C-n in Visual</td><td class="listrcol">virtual cursor at every line and leaves you in Normal mode.</td></tr>
+                <tr><td class="listlcol">C-p in Visual</td><td class="listrcol">remove the current virtual cursor and go back to the previous virtual cursor location.</td></tr>
+                <tr><td class="listlcol">C-x in Visual</td><td class="listrcol">remove the current virtual cursor and skip to the next virtual cursor location.</td></tr>
+                <tr><td class="listlcol">:{r}MultipleCursorsFind<pattern></td><td class="listrcol">regex</td></tr>
+                <tr><td class="listlcol">ctrlp</td></tr>
+                <tr><td class="listlcol">C-p</td><td class="listrcol">CtrlP file</td></tr>
+                <tr><td class="listlcol">\b</td><td class="listrcol">CtrlP buffer</td></tr>
+                <tr><td class="listlcol">\m</td><td class="listrcol">CtrlP mixed</td></tr>
+                <tr><td class="listlcol">\r</td><td class="listrcol">CtrlP most recently used</td></tr>
+				<tr><td class="listlcol">\fu</td><td class="listrcol">CtrlP funky</td></tr>
+				<tr><td class="listlcol">\fU</td><td class="listrcol">CtrlP funky with word under cursor</td></tr>
+                <tr><td class="listlcol"><F5></td><td class="listrcol"> to purge the cache</td></tr>
+                <tr><td class="listlcol">C-f/C-b</td><td class="listrcol">to cycle between modes</td></tr>
+                <tr><td class="listlcol">C-d</td><td class="listrcol">to switch to filename only search</td></tr>
+                <tr><td class="listlcol">C-r</td><td class="listrcol">to switch to regexp mode</td></tr>
+                <tr><td class="listlcol">Errors</td></tr>
+                <tr><td class="listlcol">[q</td><td class="listrcol">:cprevious|</td></tr>
+                <tr><td class="listlcol">]q</td><td class="listrcol">:cnext|</td></tr>
+                <tr><td class="listlcol">[Q</td><td class="listrcol">:cfirst|</td></tr>
+                <tr><td class="listlcol">]Q</td><td class="listrcol">:clast|</td></tr>
+                <tr><td class="listlcol">:Dispatch make_script</td><td class="listrcol">start build</td></tr>
+
+            </table>
         </td>
     </tr>
 </table>
 </body>
-:%s/foo/bar/g Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
-:s/foo/bar/g Find each occurrence of 'foo' (in the current line only), and replace it with 'bar'.
-:%s/foo/bar/gc Change each 'foo' to 'bar', but ask for confirmation first.
-:%s/foo/bar/gci Change each 'foo' (case insensitive due to the i flag) to 'bar'; ask for confirmation
-:%s/old/new/g - replace all old with new throughout file
-:%s/old/new/gc - replace all old with new throughout file with confirmations
-:5,12s/foo/bar/g Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
-:'a,'bs/foo/bar/g Change each 'foo' to 'bar' for all lines from mark a to mark b inclusive
-:'<,'>s/foo/bar/g  change each 'foo' to 'bar' for all lines within a visual selection
-:.,$s/foo/bar/g Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive.
-:.,+2s/foo/bar/g	Change each 'foo' to 'bar' for the current line (.) and the two next lines (+2).
-:g/^baz/s/foo/bar/g	Change each 'foo' to 'bar' in each line starting with 'baz'.
-
-The g flag means global – each occurrence in the line is changed, rather than just the first.
-
-:noh - remove highlighting of search matches
-<< shift left
->> shift right
-:{range}sort u
-You could create a range in advance, such as 'a,. (from mark 'a' to the current line) or you could create one on-the-fly using visual selection by pressing ':' in visual mode, after selecting the text you wish to sort, to get a range of '<,'> on the command line.
-:sort n numeric sort
-
-:Ack
-:AckAdd
-:LAck use location list
-:LAckAdd
-?    a quick summary of these keys, repeat to close
-o    to open (same as Enter)
-O    to open and close the quickfix window
-go   to preview file, open but maintain focus on ack.vim results
-t    to open in new tab
-T    to open in new tab without moving to it
-h    to open in horizontal split
-H    to open in horizontal split, keeping focus on the results
-v    to open in vertical split
-gv   to open in vertical split, keeping focus on the results
-q    to close the quickfix window
-
-gv select last selection and enter visual mode
-Pasting in insert mode
-    C-r " paste from unamed register -> last yanked/cut
-    C-r * paste from system clipboard
-Cut/Yank/Paste from system clipboard
-    "+{operator}
-    
-    [operator] -> y,d,c,gU(make upper case),gu(make lower case),~(switch case),<(shift left),>(shift right),=(smart indent)
-</html>
-
-CTRL+r paste in insert mode
