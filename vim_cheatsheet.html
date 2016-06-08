@@ -4,7 +4,7 @@
 <style>
 body {
     display: inline-block;
-    min-width: 4000px;
+    min-width: 3000px;
     box-sizing: border-box;
 	background-color: #FFFFFF;
 }
@@ -14,29 +14,26 @@ body {
 }
 
 table.fixed {
-	table-layout:fixed;
+	table-layout:auto;
 }
 
 table.fixed td {
-    width: 100;
-    height: 75;
+    width: 75px;
     text-align:center;
     vertical-align:middle;
     line-height: 0.8;
 }
 
+table.fixed tr {
+    height: 5px;
+}
 
 table.fixedlist { table-layout:fixed; }
 table.fixedlist td {
     width: 75px;
-    height: 55px;
     text-align:center;
     vertical-align:top;
     line-height: 0.8;
-}
-
-table.fixedlist tr {
-    height: 50px;
 }
 
 td.listlcol {
@@ -74,10 +71,10 @@ vimact {
         <td>
             <table class="fixed">
                 <tr>
-                    <td rowspan=5 colspan=5>
+                    <td rowspan=7 colspan=4>
                         <table class="fixedlist">
                             <tr>
-                                <td colspan=3><vimact><red>[operator]</red>[count][motion]</vimact></td>
+                                <td colspan=4><vimact><red>[op]</red>[count][motion]</vimact></td>
                             </tr>
                             <tr>
                                 <td>
@@ -146,7 +143,7 @@ vimact {
                             </tr>
                         </table>
                     </td>
-                    <td/><td/>
+                    <td/><td/><td/>
                     <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
                 </tr>
                 <tr>
@@ -155,17 +152,17 @@ vimact {
                     <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
                 </tr>
                 <tr>
-                    <td/><td/>
+                    <td/><td/><td/>
                     <td id="p01"><vimact>C-b</vimact><br/><small>page</small></td>
                     <td><vimact>C-u</vimact><br/><small>1/2 page</small></td>
                 </tr>
                 <tr>
-                    <td/><td/>
+                    <td/><td/><td/>
                     <td id="p01"><vimact>H</vimact><br/><small>cursor in screen</small></td>
                     <td><vimact>zt</vimact><br/><small>screen on cursor</small></td>
                 </tr>
                 <tr>
-                    <td/>
+                    <td/><td/>
                     <td><vimact>[(</vimact><br/><small>enclosing (</small></td>
                     <td id="p01"><vimact>[[</vimact><br/><small>enclosing {</small></td>
                     <td><vimact>{</vimact><br/><small>empty line</small></td>
