@@ -25,15 +25,23 @@ table.fixed td {
 }
 
 table.fixed tr {
-    height: 5px;
+    height: 75px;
 }
 
-table.fixedlist { table-layout:fixed; }
+table.fixedlist {
+	table-layout:auto;
+	background-color: #F0F0F0;
+}
 table.fixedlist td {
     width: 75px;
     text-align:center;
     vertical-align:top;
     line-height: 0.8;
+}
+
+table.fixedlist td.bunch {
+	text-align:left;
+	font-size: 70%;
 }
 
 td.listlcol {
@@ -71,7 +79,10 @@ vimact {
         <td>
             <table class="fixed">
                 <tr>
-                    <td rowspan=7 colspan=4>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
+					<td/><td/>
+					<td rowspan=5 colspan=4>
                         <table class="fixedlist">
                             <tr>
                                 <td colspan=4><vimact><red>[op]</red>[count][motion]</vimact></td>
@@ -97,11 +108,9 @@ vimact {
                                 <td>
                                     <vimact>yy</vimact><br/><small>yank line</small>
                                 </td>
-                                <td>
-                                    <vimact>"[r]<red>[op]</red></vimact><br/><small>action into/from register</small>
-                                </td>
-                                <td>
-                                    <vimact>"+<red>[op]</red></vimact><br/><small>system clipboard</small>
+                                <td class="bunch" colspan=2>
+                                    <vimact>"[r]<red>[op]</red></vimact><small>action into/from register</small><br/>
+									<vimact>"+<red>[op]</red></vimact><small>system clipboard</small>
                                 </td>
                             </tr>
                             <tr>
@@ -111,58 +120,48 @@ vimact {
                                 <td>
                                     <vimact>cc</vimact><br/><small>change line</small>
                                 </td>
-                                <td>
-                                    <vimact>C-r "</vimact><br/><small>paste<br/>(insert mode)</small>
-                                </td>
-                                <td>
-                                    <vimact>C-r *</vimact><br/><small>paste system clipboard<br/>(insert mode)</small>
+                                <td class="bunch" colspan=2>
+                                    <vimact>C-r "</vimact> <small>paste<br/>(insert mode)</small><br/>
+                                    <vimact>C-r *</vimact> <small>paste system clipboard<br/>(insert mode)</small>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="bunch" colspan=2>
                                     <red><vimact><</vimact></red> <small>shift left</small><br/>
                                     <red><vimact>></vimact></red> <small>shift right</small><br/>
                                     <red><vimact>=</vimact></red> <small>indent</small>
                                 </td>
-                                <td>
+								<td class="bunch" colspan=2>
+                                    <red><vimact>~</vimact></red> <small>swap case</small><br/>
+                                    <red><vimact>gu</vimact></red> <small>lowercase</small><br/>
+                                    <red><vimact>gU</vimact></red> <small>uppercase</small><br/>
+                                </td>
+                                <td class="bunch" colspan=2>
                                     <vimact><<</vimact> <small>shift line left</small><br/>
                                     <vimact>>></vimact> <small>shift line right</small><br/>
                                     <vimact>==</vimact> <small>indent line</small>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>~</vimact></red> <small>swap case</small><br/>
-                                    <red><vimact>gu</vimact></red> <small>lowercase</small><br/>
-                                    <red><vimact>gU</vimact></red> <small>uppercase</small><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                </td>
-                            </tr>
                         </table>
                     </td>
-                    <td/><td/><td/>
-                    <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
                 </tr>
                 <tr>
+					<td/><td/><td/><td/><td/>
                     <td><vimact>#</vimact><br/><small>find word under cursor</small></td>
                     <td><vimact>N</vimact><br/><small>prev text</small></td>
                     <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/>
+                    <td/><td/><td/><td/><td/><td/><td/>
                     <td id="p01"><vimact>C-b</vimact><br/><small>page</small></td>
                     <td><vimact>C-u</vimact><br/><small>1/2 page</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/>
-                    <td id="p01"><vimact>H</vimact><br/><small>cursor in screen</small></td>
-                    <td><vimact>zt</vimact><br/><small>screen on cursor</small></td>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>zt</vimact><br/><small>screen on cursor</small></td>
                 </tr>
                 <tr>
-                    <td/><td/>
+                    <td/><td/><td/><td/><td/><td/>
                     <td><vimact>[(</vimact><br/><small>enclosing (</small></td>
                     <td id="p01"><vimact>[[</vimact><br/><small>enclosing {</small></td>
                     <td><vimact>{</vimact><br/><small>empty line</small></td>
@@ -186,7 +185,7 @@ vimact {
                     <td><vimact>b</vimact><br/><small>word<small></td>
                     <td><vimact>ge</vimact><br/><small>word end<small></td>
                     <td><vimact>h</vimact><br/><small>left<small></td>
-                    <td><vimact>M</vimact><br/><small>curson in screen<br><vimact>zz</vimact><br/><small>screen on curson<small></td>
+                    <td><vimact>zz</vimact><br/><small>screen on curson<small></td>
                     <td><vimact>l</vimact><br/><small>right<small></td>
                     <td><vimact>e</vimact><br/><small>word end<small></td>
                     <td><vimact>w</vimact><br/><small>word<small></td>
@@ -211,9 +210,8 @@ vimact {
                     <td><vimact>])</vimact><br/><small>enclosing )<small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/><td/><td/><td/>
-                    <td><vimact>zb</vimact><br/><small>screen on cursor</small></td>
-                    <td id="p01"><vimact>L</vimact><br/><small>cursor in screen</small></td>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>zb</vimact><br/><small>screen on cursor</small></td>
                 </tr>
                 <tr>
                     <td/><td/><td/><td/><td/><td/>
@@ -322,7 +320,7 @@ vimact {
                 <tr><td class="listlcol">\gf (Normal)</td><td class="listrcol">(global find) start empty Ag for cpp</td></tr>
                 <tr><td class="listlcol">\gf (Visual)</td><td class="listrcol">(global find) Ag with selection for cpp</td></tr>
                 <tr><td class="listlcol">\n</td><td class="listrcol">toggle relative **[n]**umber</td></tr>
-                <tr><td class="listlcol">\t</td><td class="listrcol">toggle nerd **[t]**ree</td></tr>
+                <tr><td class="listlcol">F5</td><td class="listrcol">toggle nerd **[t]**ree</td></tr>
                 <tr><td class="listlcol">F8</td><td class="listrcol">toggle ctag bar</td></tr>
                 <tr><td class="listlcol">A</td></tr>
                 <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
@@ -349,10 +347,10 @@ vimact {
                 <tr><td class="listlcol">\b</td><td class="listrcol">CtrlP buffer</td></tr>
                 <tr><td class="listlcol">\m</td><td class="listrcol">CtrlP mixed</td></tr>
                 <tr><td class="listlcol">\r</td><td class="listrcol">CtrlP most recently used</td></tr>
-				<tr><td class="listlcol">\fu</td><td class="listrcol">CtrlP funky</td></tr>
-				<tr><td class="listlcol">\fU</td><td class="listrcol">CtrlP funky with word under cursor</td></tr>
+				<tr><td class="listlcol">\t</td><td class="listrcol">CtrlP buffer tags</td></tr>
                 <tr><td class="listlcol"><F5></td><td class="listrcol"> to purge the cache</td></tr>
                 <tr><td class="listlcol">C-f/C-b</td><td class="listrcol">to cycle between modes</td></tr>
+				<tr><td class="listlcol">C-j/C-k</td><td class="listrcol">up/down</td></tr>
                 <tr><td class="listlcol">C-d</td><td class="listrcol">to switch to filename only search</td></tr>
                 <tr><td class="listlcol">C-r</td><td class="listrcol">to switch to regexp mode</td></tr>
                 <tr><td class="listlcol">Errors</td></tr>
