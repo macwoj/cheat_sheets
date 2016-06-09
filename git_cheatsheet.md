@@ -41,6 +41,7 @@ MISC|Description
 `git remote show origin`|show info about remote, show repo URL
 `git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
 `git remote remove local`|remove remote branch local
+`get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
 `git rev-parse HEAD`|get sha of current commit
@@ -66,11 +67,12 @@ SUBMODULE|Description
 
 STASH|Description
 -----|-----------
-git stash apply stash@{2}|unstash the specific stash from stack
-git stash list|get list of stashed commits
-git stash show -p stash@{0}|show the stash diff
-git stash clear|clear all stashed
-git checkout stash@{0} -- <filename>|checkout file from stash
+`git stash apply stash@{2}`|unstash the specific stash from stack
+`git stash list`|get list of stashed commits
+`git stash show -p stash@{0}`|show the stash diff
+`git stash clear`|clear all stashed
+`git checkout stash@{0} -- <filename>`|checkout file from stash
+`git stash --keep-index`|stash all files except files checked into index
 
 REBASE|Description
 ------|-----------
