@@ -19,6 +19,7 @@ MISC|Description
 ----|-----------
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
+`git branch -f branch-name new-tip-commit`|move branch pointer to commit
 `git branch -d branch_to_delete`|delete local branch
 `git branch -m branch_to_rename`|rename local branch
 `git branch -u origin/develop`|set current branch to track remote branch
