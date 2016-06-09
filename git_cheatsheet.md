@@ -1,3 +1,5 @@
+# Git cheat sheet
+
 ### Shortcuts
 ```
 git config --global alias.br branch
