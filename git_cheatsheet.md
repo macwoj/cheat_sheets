@@ -15,6 +15,9 @@ git config --global alias.su submodule
 git config --global alias.suuir 'submodule update --init --recursive'
 git config --global alias.lg 'log --oneline --decorate --graph'
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
 ```
 ### Commands
 MISC|Description
