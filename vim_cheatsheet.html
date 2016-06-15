@@ -96,17 +96,25 @@ vimact {
             <table class="fixed">
                 <tr>
 					
-					<td rowspan=3 colspan=2>
+					<td rowspan=4 colspan=5>
                         <table class="fixed">
                             <tr>
                                 <td><vimact>v</vimact><br/><small>visual mode</small></td>
 								<td><vimact>gv</vimact><br/><small>select last selection</small></td>
+								<td><vimact>P</vimact><br/><small>paste before</small></td>
+								<td><vimact>p</vimact><br/><small>paste after</small></td>
                             </tr>
 							<tr>
 								<td><vimact>V</vimact><br/><small>visual line mode</small></td>
+								<td/>
+								<td><vimact>"+<red>[op]</red></vimact><br/><small>system clipboard</small></td>
+								<td><vimact>"[r]<red>[op]</red></vimact><br/><small>action into/from register</small></td>
 							</tr>
 							<tr>
 								<td><vimact>C-v</vimact><br/><small>visual block mode</small></td>
+								<td/>
+								<td><vimact>C-r *</vimact><br/><small>paste system clipboard<br/>(insert mode)</small></td>
+								<td><vimact>C-r "</vimact><br/><small>paste<br/>(insert mode)</small><br/></td>
 							</tr>
 						</table>
 					</td>
@@ -170,37 +178,18 @@ vimact {
                                 <td>
 									<red><vimact>~</vimact></red> <small>swap case</small><br/>
 								</td>
-								<td>
-									<vimact>"+<red>[op]</red></vimact><small>system clipboard</small>
-								</td>
+								
 							</tr>
 							<tr>
                                 <td>
 									<red><vimact>gu</vimact></red> <small>lowercase</small><br/>
-								</td>
-								<td>
-								    <vimact>"[r]<red>[op]</red></vimact><small>action into/from register</small><br/>
 								</td>
 							</tr>
 							<tr>
                                 <td>
 									<red><vimact>gU</vimact></red> <small>uppercase</small><br/>
 								</td>
-								<td>
-									<vimact>C-r *</vimact> <small>paste system clipboard<br/>(insert mode)</small>
-                                </td>
 							</tr>
-							<tr>
-								<td/>
-								<td>
-                                    <vimact>C-r "</vimact> <small>paste<br/>(insert mode)</small><br/>
-                                </td>
-							</tr>
-							<tr>
-								<td/>
-								
-							</tr>
-							
                         </table>
                     </td>
                 </tr>
@@ -354,8 +343,13 @@ vimact {
 				<tr><td class="listlcol">\d</td><td class="listrcol">dispatch and make current file</td></tr>
                 <tr><td class="listlcol">\w</td><td class="listrcol">toggle word wrap</td></tr>
 				<tr><td/><br/></tr>
-				<tr><td class="listlcol">C-]</td><td class="listrcol">ctags jump to tag</td></tr>
+				<tr><td class="listlcol"><b>CTags</b></td></tr>
+				<tr><td class="listlcol">C-]</td><td class="listrcol">jump to tag</td></tr>
 				<tr><td class="listlcol">C-t</td><td class="listrcol">ctags jump back from tag</td></tr>
+				<tr><td class="listlcol">gd</td><td class="listrcol">goto local declaration</td></tr>
+				<tr><td class="listlcol">gD</td><td class="listrcol">goto global declaration</td></tr>
+				<tr><td class="listlcol">g]</td><td class="listrcol">list matching tags</td></tr>
+				<tr><td/><br/></tr>
 				<tr><td class="listlcol">F2</td><td class="listrcol">YcmCompleter GoTo</td></tr>
 				<tr><td class="listlcol">F3</td><td class="listrcol">YcmCompleter GoToDeclaration</td></tr>
 				<tr><td class="listlcol">F4</td><td class="listrcol">YcmCompleter GoToDefinition</td></tr>
@@ -370,13 +364,14 @@ vimact {
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>Replace</b></td></tr>
 				<tr><td class="listlcol">rx</td><td class="listrcol">replace all chars in selection with x</td></tr>
-                <tr><td class="listlcol">:{range}sort u</td><td class="listrcol">sort and remove dubs</td></tr>
+                <tr><td class="listlcol">:{range}sort u</td><td class="listrcol">sort and remove dups</td></tr>
                 <tr><td class="listlcol">:{range}sort</td><td class="listrcol">sort</td></tr>
                 <tr><td class="listlcol">:{range}sort!</td><td class="listrcol">sort reverse</td></tr>
                 <tr><td class="listlcol">:{range}sort n</td><td class="listrcol">numeric sort</td></tr>
                 <tr><td class="listlcol">:s/foo/bar/g</td><td class="listrcol">Change each 'foo' to 'bar' in the current line.</td></tr>
                 <tr><td class="listlcol">:%s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all the lines., but ask for confirmation first.</td></tr>
                 <tr><td class="listlcol">:{range}s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all lines within a visual selection, but ask for confirmation first.</td></tr>
+				<tr><td class="listlcol">:g/pattern/d</td><td class="listrcol">remove every line matching pattern</td></tr>
                 <tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>Buffer</b></td></tr>
                 <tr><td class="listlcol">C-w ghjk</td><td class="listrcol">move to the left/bottom/top/right window</td></tr>
@@ -388,6 +383,8 @@ vimact {
                 <tr><td class="listlcol">:bd</td><td class="listrcol">close current buffer</td></tr>
                 <tr><td class="listlcol">:bn</td><td class="listrcol">next buffer</td></tr>
                 <tr><td class="listlcol">:bp</td><td class="listrcol">prev buffer</td></tr>
+				<tr><td class="listlcol">C-6</td><td class="listrcol">last buffer</td></tr>
+				<tr><td class="listlcol">:enew</td><td class="listrcol">new buffer</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>A</b></td></tr>
                 <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
@@ -445,6 +442,8 @@ vimact {
                 <tr><td class="listlcol">:noh</td><td class="listrcol">turn off search highlight</td></tr>
                 <tr><td class="listlcol">vim -d file1 file2</td><td class="listrcol">diff 2 files</td></tr>
                 <tr><td class="listlcol">%</td><td class="listrcol">in {range} will use whole file</td></tr>
+				<tr><td class="listlcol">:%!xmllint --format -</td><td class="listrcol">format xml in whole file</td></tr>
+				<tr><td class="listlcol">:{range}!xmllint --format -</td><td class="listrcol">format xml in selection</td></tr>
             </table>
         </td>
     </tr>
