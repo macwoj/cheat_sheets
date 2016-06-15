@@ -61,14 +61,14 @@ table.fixedlist td.bunch {
 td.listlcol {
     text-align:left;
     vertical-align:center;
-	font-size: 120%;
+	font-size: 130%;
 }
 
 td.listrcol {
     width: 500px;
     text-align:left;
     vertical-align:center;
-	font-size: 120%;
+	font-size: 130%;
 }
 small {
     font-size: x-small;
@@ -95,10 +95,25 @@ vimact {
         <td>
             <table class="fixed">
                 <tr>
-                    <td/><td/><td/><td/><td/><td/><td/>
+					
+					<td rowspan=3 colspan=2>
+                        <table class="fixed">
+                            <tr>
+                                <td><vimact>v</vimact><br/><small>visual mode</small></td>
+								<td><vimact>gv</vimact><br/><small>select last selection</small></td>
+                            </tr>
+							<tr>
+								<td><vimact>V</vimact><br/><small>visual line mode</small></td>
+							</tr>
+							<tr>
+								<td><vimact>C-v</vimact><br/><small>visual block mode</small></td>
+							</tr>
+						</table>
+					</td>
+                    <td/><td/><td/><td/><td/><td/>
                     <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
 					<td/><td/>
-					<td rowspan=4 colspan=5>
+					<td rowspan=5 colspan=5>
                         <table class="fixedlist">
                             <tr>
                                 <td colspan=4><vimact><red>[op]</red>[count][motion]</vimact></td>
@@ -190,18 +205,18 @@ vimact {
                     </td>
                 </tr>
                 <tr>
-					<td/><td/><td/><td/><td/>
+					<td/><td/><td/><td/>
                     <td><vimact>#</vimact><br/><small>find word under cursor</small></td>
                     <td><vimact>N</vimact><br/><small>prev text</small></td>
                     <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td/><td/><td/><td/><td/><td/>
                     <td id="p01"><vimact>C-b</vimact><br/><small>page</small></td>
                     <td><vimact>C-u</vimact><br/><small>1/2 page</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td/><td/><td/><td/><td/><td/>
                     <td id="p01"><vimact>zt</vimact><br/><small>screen on cursor</small></td>
                 </tr>
                 <tr>
@@ -335,19 +350,26 @@ vimact {
         </td>
         <td>
             <table class="commands">
-                <tr><td class="listlcol">v</td><td class="listrcol">enter Visual Mode</td></tr>
-                <tr><td class="listlcol">C-v</td><td class="listrcol">enter Visual Mode</td></tr>
-                <tr><td class="listlcol">rx</td><td class="listrcol">replace all chars in selection with x</td></tr>
-                <tr><td class="listlcol"></td><td class="listrcol"></td></tr>
-                <tr><td class="listlcol">C-v <tab></td><td class="listrcol"> in insert mode adds tab char</td></tr>
-                <tr><td class="listlcol">:retab</td><td class="listrcol">fix tabs to spaces</td></tr>
-                <tr><td class="listlcol">:so ~/.vimrc</td><td class="listrcol">Reload vimrc</td></tr>
-                <tr><td class="listlcol">:! wc %</td><td class="listrcol">run external command on current file</td></tr>
-                <tr><td class="listlcol">:noh</td><td class="listrcol">turn off search highlight</td></tr>
-                <tr><td class="listlcol">vim -d file1 file2</td><td class="listrcol">diff 2 files</td></tr>
-                <tr><td class="listlcol">%</td><td class="listrcol">in {range} will use whole file</td></tr>
+				<tr><td class="listlcol">\n</td><td class="listrcol">toggle relative number</td></tr>
+				<tr><td class="listlcol">\d</td><td class="listrcol">dispatch and make current file</td></tr>
+                <tr><td class="listlcol">\w</td><td class="listrcol">toggle word wrap</td></tr>
+				<tr><td/><br/></tr>
+				<tr><td class="listlcol">C-]</td><td class="listrcol">ctags jump to tag</td></tr>
+				<tr><td class="listlcol">C-t</td><td class="listrcol">ctags jump back from tag</td></tr>
+				<tr><td class="listlcol">F2</td><td class="listrcol">YcmCompleter GoTo</td></tr>
+				<tr><td class="listlcol">F3</td><td class="listrcol">YcmCompleter GoToDeclaration</td></tr>
+				<tr><td class="listlcol">F4</td><td class="listrcol">YcmCompleter GoToDefinition</td></tr>
+                <tr><td class="listlcol">F5</td><td class="listrcol">open nerd tree</td></tr>
+                <tr><td class="listlcol">F8</td><td class="listrcol">toggle ctag bar</td></tr>
+				<tr><td/><br/></tr>
+				<tr><td class="listlcol"><b>Find</b></td></tr>
+                <tr><td class="listlcol">\gf (Normal)</td><td class="listrcol">(global find) start empty Ag for cpp</td></tr>
+                <tr><td class="listlcol">\gf (Visual)</td><td class="listrcol">(global find) Ag with selection for cpp</td></tr>
+				<tr><td class="listlcol">\f (Normal)</td><td class="listrcol">(find)start empty Ag in current file</td></tr>
+                <tr><td class="listlcol">\f (Visual)</td><td class="listrcol">(find) Ag with selection in current file</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>Replace</b></td></tr>
+				<tr><td class="listlcol">rx</td><td class="listrcol">replace all chars in selection with x</td></tr>
                 <tr><td class="listlcol">:{range}sort u</td><td class="listrcol">sort and remove dubs</td></tr>
                 <tr><td class="listlcol">:{range}sort</td><td class="listrcol">sort</td></tr>
                 <tr><td class="listlcol">:{range}sort!</td><td class="listrcol">sort reverse</td></tr>
@@ -355,36 +377,35 @@ vimact {
                 <tr><td class="listlcol">:s/foo/bar/g</td><td class="listrcol">Change each 'foo' to 'bar' in the current line.</td></tr>
                 <tr><td class="listlcol">:%s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all the lines., but ask for confirmation first.</td></tr>
                 <tr><td class="listlcol">:{range}s/foo/bar/gc</td><td class="listrcol">Change each 'foo' to 'bar' in all lines within a visual selection, but ask for confirmation first.</td></tr>
-                <tr><td class="listlcol">C-w ghjk</td><td class="listrcol">move to the left/bottom/top/right window, USE THIS WITH NERDTREE AND TAGBAR</td></tr>
-                <tr><td class="listlcol">:sp</td><td class="listrcol">horizontal split</td></tr>
+                <tr><td/><br/></tr>
+                <tr><td class="listlcol"><b>Buffer</b></td></tr>
+                <tr><td class="listlcol">C-w ghjk</td><td class="listrcol">move to the left/bottom/top/right window</td></tr>
+				<tr><td class="listlcol">C-w W</td><td class="listrcol">move to next window</td></tr>
+				<tr><td class="listlcol">:sp</td><td class="listrcol">horizontal split</td></tr>
                 <tr><td class="listlcol">:vsp</td><td class="listrcol">vertical split</td></tr>
-                <tr><td class="listlcol">:b <filename></td><td class="listrcol">open buffer with filename</td></tr>
-                <tr><td class="listlcol">:b <number></td><td class="listrcol">open buffer with number</td></tr>
+				<tr><td class="listlcol">:b <filename></td><td class="listrcol">open buffer with filename</td></tr>
+                <tr><td class="listlcol">:b<number></td><td class="listrcol">open buffer with number</td></tr>
                 <tr><td class="listlcol">:bd</td><td class="listrcol">close current buffer</td></tr>
                 <tr><td class="listlcol">:bn</td><td class="listrcol">next buffer</td></tr>
                 <tr><td class="listlcol">:bp</td><td class="listrcol">prev buffer</td></tr>
-                <tr><td class="listlcol">\gf (Normal)</td><td class="listrcol">(global find) start empty Ag for cpp</td></tr>
-                <tr><td class="listlcol">\gf (Visual)</td><td class="listrcol">(global find) Ag with selection for cpp</td></tr>
-                <tr><td class="listlcol">\n</td><td class="listrcol">toggle relative **[n]**umber</td></tr>
-                <tr><td class="listlcol">F5</td><td class="listrcol">toggle nerd **[t]**ree</td></tr>
-                <tr><td class="listlcol">F8</td><td class="listrcol">toggle ctag bar</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>A</b></td></tr>
                 <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
-                <tr><td class="listlcol">\as</td><td class="listrcol">**[s]**plits and switches</td></tr>
-                <tr><td class="listlcol">\av</td><td class="listrcol">**[v]**ertical splits and switches</td></tr>
-                <tr><td class="listlcol">\at</td><td class="listrcol">new **[t]**ab and switches</td></tr>
-                <tr><td class="listlcol">\an</td><td class="listrcol">cycles through **[n]**ext match</td></tr>
-                <tr><td class="listlcol">\d</td><td class="listrcol">dispatch and make current file</td></tr>
-                <tr><td class="listlcol">\w</td><td class="listrcol">toggle word wrap</td></tr>
-				<tr><td/><br/></tr>
-                <tr><td class="listlcol"><b>Easy Motion</b></td></tr>
-                <tr><td class="listlcol">\\w</td><td class="listrcol">easy motion word forward</td></tr>
-                <tr><td class="listlcol">\\b</td><td class="listrcol">easy motion word back</td></tr>
+                <tr><td class="listlcol">\as</td><td class="listrcol">splits and switches</td></tr>
+                <tr><td class="listlcol">\av</td><td class="listrcol">vertical splits and switches</td></tr>
+                <tr><td class="listlcol">\at</td><td class="listrcol">new tab and switches</td></tr>
+                <tr><td class="listlcol">\an</td><td class="listrcol">cycles through next match</td></tr>
 			</table>
 		</td>
 		<td>
 			<table class="commands">
+				<tr><td/><br/></tr>
+				
+                <tr><td class="listlcol"><b>Easy Motion</b></td></tr>
+                <tr><td class="listlcol">\\w</td><td class="listrcol">easy motion word forward</td></tr>
+                <tr><td class="listlcol">\\b</td><td class="listrcol">easy motion word back</td></tr>
+				<tr><td class="listlcol">\\k</td><td class="listrcol">easy motion up line</td></tr>
+				<tr><td class="listlcol">\\j</td><td class="listrcol">easy motion down line</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>Nerd Commenter</b></td></tr>
                 <tr><td class="listlcol">[count]\cc</td><td class="listrcol">Comment out the current line or text selected in visual mode</td></tr>
@@ -403,18 +424,27 @@ vimact {
                 <tr><td class="listlcol">\m</td><td class="listrcol">CtrlP mixed</td></tr>
                 <tr><td class="listlcol">\r</td><td class="listrcol">CtrlP most recently used</td></tr>
 				<tr><td class="listlcol">\t</td><td class="listrcol">CtrlP buffer tags</td></tr>
-                <tr><td class="listlcol"><F5></td><td class="listrcol"> to purge the cache</td></tr>
-                <tr><td class="listlcol">C-f/C-b</td><td class="listrcol">to cycle between modes</td></tr>
-				<tr><td class="listlcol">C-j/C-k</td><td class="listrcol">up/down</td></tr>
-                <tr><td class="listlcol">C-d</td><td class="listrcol">to switch to filename only search</td></tr>
-                <tr><td class="listlcol">C-r</td><td class="listrcol">to switch to regexp mode</td></tr>
+                <tr><td class="listlcol">F5</td><td class="listrcol">(in CtrlP) purge the cache</td></tr>
+                <tr><td class="listlcol">C-f/C-b</td><td class="listrcol">(in CtrlP) cycle between modes</td></tr>
+				<tr><td class="listlcol">C-j/C-k</td><td class="listrcol">(in CtrlP) up/down</td></tr>
+                <tr><td class="listlcol">C-d</td><td class="listrcol">(in CtrlP) switch to filename only search</td></tr>
+                <tr><td class="listlcol">C-r</td><td class="listrcol">(in CtrlP) switch to regexp mode</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>Errors</b></td></tr>
                 <tr><td class="listlcol">[q</td><td class="listrcol">:cprevious|</td></tr>
                 <tr><td class="listlcol">]q</td><td class="listrcol">:cnext|</td></tr>
                 <tr><td class="listlcol">[Q</td><td class="listrcol">:cfirst|</td></tr>
                 <tr><td class="listlcol">]Q</td><td class="listrcol">:clast|</td></tr>
-                <tr><td class="listlcol">:Dispatch make_script</td><td class="listrcol">start build</td></tr>
+				<tr><td/><br/></tr>
+				<tr><td class="listlcol">v</td><td class="listrcol">enter Visual Mode</td></tr>
+                <tr><td class="listlcol">C-v</td><td class="listrcol">enter Visual Mode</td></tr>
+                <tr><td class="listlcol">C-v <tab></td><td class="listrcol"> in insert mode adds tab char</td></tr>
+                <tr><td class="listlcol">:retab</td><td class="listrcol">fix tabs to spaces</td></tr>
+                <tr><td class="listlcol">:so ~/.vimrc</td><td class="listrcol">Reload vimrc</td></tr>
+                <tr><td class="listlcol">:! wc %</td><td class="listrcol">run external command on current file</td></tr>
+                <tr><td class="listlcol">:noh</td><td class="listrcol">turn off search highlight</td></tr>
+                <tr><td class="listlcol">vim -d file1 file2</td><td class="listrcol">diff 2 files</td></tr>
+                <tr><td class="listlcol">%</td><td class="listrcol">in {range} will use whole file</td></tr>
             </table>
         </td>
     </tr>
