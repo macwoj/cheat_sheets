@@ -1,3 +1,5 @@
+# Git cheat sheet
+
 ### Shortcuts
 ```
 git config --global alias.br branch
@@ -13,12 +15,16 @@ git config --global alias.su submodule
 git config --global alias.suuir 'submodule update --init --recursive'
 git config --global alias.lg 'log --oneline --decorate --graph'
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
 ```
 ### Commands
 MISC|Description
 ----|-----------
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
+`git branch -f branch-name new-tip-commit`|move branch pointer to commit
 `git branch -d branch_to_delete`|delete local branch
 `git branch -m branch_to_rename`|rename local branch
 `git branch -u origin/develop`|set current branch to track remote branch
@@ -40,6 +46,7 @@ MISC|Description
 `git remote show origin`|show info about remote, show repo URL
 `git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
 `git remote remove local`|remove remote branch local
+`get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
 `git rev-parse HEAD`|get sha of current commit
@@ -65,11 +72,12 @@ SUBMODULE|Description
 
 STASH|Description
 -----|-----------
-git stash apply stash@{2}|unstash the specific stash from stack
-git stash list|get list of stashed commits
-git stash show -p stash@{0}|show the stash diff
-git stash clear|clear all stashed
-git checkout stash@{0} -- <filename>|checkout file from stash
+`git stash apply stash@{2}`|unstash the specific stash from stack
+`git stash list`|get list of stashed commits
+`git stash show -p stash@{0}`|show the stash diff
+`git stash clear`|clear all stashed
+`git checkout stash@{0} -- <filename>`|checkout file from stash
+`git stash --keep-index`|stash all files except files checked into index
 
 REBASE|Description
 ------|-----------
