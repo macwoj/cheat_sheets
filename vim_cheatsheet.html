@@ -107,8 +107,8 @@ vimact {
 							<tr>
 								<td><vimact>V</vimact><br/><small>visual line mode</small></td>
 								<td/>
-								<td><vimact>"+<red>[op]</red></vimact><br/><small>system clipboard</small></td>
-								<td><vimact>"[r]<red>[op]</red></vimact><br/><small>action into/from register</small></td>
+								<td><vimact>"+<red>op</red></vimact><br/><small>system clipboard</small></td>
+								<td><vimact>"r<red>op</red></vimact><br/><small>action into/from register</small></td>
 							</tr>
 							<tr>
 								<td><vimact>C-v</vimact><br/><small>visual block mode</small></td>
@@ -349,6 +349,8 @@ vimact {
 				<tr><td class="listlcol">gd</td><td class="listrcol">goto local declaration</td></tr>
 				<tr><td class="listlcol">gD</td><td class="listrcol">goto global declaration</td></tr>
 				<tr><td class="listlcol">g]</td><td class="listrcol">list matching tags</td></tr>
+				<tr><td class="listlcol">gC-]</td><td class="listrcol">jump to tag if defined once otherwise list matching tags</td></tr>
+				<tr><td class="listlcol">:tags</td><td class="listrcol">list tag stack</td></tr>
 				<tr><td/><br/></tr>
 				<tr><td class="listlcol">F2</td><td class="listrcol">YcmCompleter GoTo</td></tr>
 				<tr><td class="listlcol">F3</td><td class="listrcol">YcmCompleter GoToDeclaration</td></tr>
@@ -384,7 +386,9 @@ vimact {
                 <tr><td class="listlcol">:bn</td><td class="listrcol">next buffer</td></tr>
                 <tr><td class="listlcol">:bp</td><td class="listrcol">prev buffer</td></tr>
 				<tr><td class="listlcol">C-6</td><td class="listrcol">last buffer</td></tr>
-				<tr><td class="listlcol">:enew</td><td class="listrcol">new buffer</td></tr>
+				<tr><td class="listlcol">:enew</td><td class="listrcol">new buffer, with filename creates</td></tr>
+				<tr><td class="listlcol">:e</td><td class="listrcol">reload buffer, with filename creates</td></tr>
+				<tr><td class="listlcol">:bufdo e</td><td class="listrcol">reload buffer all buffers, runs foreach buffer</td></tr>
 				<tr><td/><br/></tr>
                 <tr><td class="listlcol"><b>A</b></td></tr>
                 <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
