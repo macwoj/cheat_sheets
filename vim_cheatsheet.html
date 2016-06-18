@@ -4,7 +4,7 @@
 <style>
 body {
     display: inline-block;
-    min-width: 3000px;
+    min-width: 2500px;
     box-sizing: border-box;
 	background-color: #FFFFFF;
 }
@@ -113,12 +113,12 @@ vimact {
 							<tr>
 								<td><vimact>C-v</vimact><br/><small>visual block mode</small></td>
 								<td/>
-								<td><vimact>C-r *</vimact><br/><small>paste system clipboard<br/>(insert mode)</small></td>
-								<td><vimact>C-r "</vimact><br/><small>paste<br/>(insert mode)</small><br/></td>
+								<td><vimact>C-r*</vimact><br/><small>paste system clipboard<br/>(insert mode)</small></td>
+								<td><vimact>C-r"</vimact><br/><small>paste<br/>(insert mode)</small><br/></td>
 							</tr>
 						</table>
 					</td>
-                    <td/><td/><td/><td/><td/><td/>
+                    <td/><td/>
                     <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
 					<td/><td/>
 					<td rowspan=5 colspan=5>
@@ -194,18 +194,17 @@ vimact {
                     </td>
                 </tr>
                 <tr>
-					<td/><td/><td/><td/>
                     <td><vimact>#</vimact><br/><small>find word under cursor</small></td>
                     <td><vimact>N</vimact><br/><small>prev text</small></td>
                     <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/><td/><td/><td/>
+                    <td/><td/>
                     <td id="p01"><vimact>C-b</vimact><br/><small>page</small></td>
                     <td><vimact>C-u</vimact><br/><small>1/2 page</small></td>
                 </tr>
                 <tr>
-                    <td/><td/><td/><td/><td/><td/>
+                    <td/><td/>
                     <td id="p01"><vimact>zt</vimact><br/><small>screen on cursor</small></td>
                 </tr>
                 <tr>
@@ -389,19 +388,18 @@ vimact {
 				<tr><td class="listlcol">:enew</td><td class="listrcol">new buffer, with filename creates</td></tr>
 				<tr><td class="listlcol">:e</td><td class="listrcol">reload buffer, with filename creates</td></tr>
 				<tr><td class="listlcol">:bufdo e</td><td class="listrcol">reload buffer all buffers, runs foreach buffer</td></tr>
-				<tr><td/><br/></tr>
+				
+			</table>
+		</td>
+		<td>
+			<table class="commands">
                 <tr><td class="listlcol"><b>A</b></td></tr>
                 <tr><td class="listlcol">\a</td><td class="listrcol">switches to the header file corresponding to the current file being edited (or vise versa)</td></tr>
                 <tr><td class="listlcol">\as</td><td class="listrcol">splits and switches</td></tr>
                 <tr><td class="listlcol">\av</td><td class="listrcol">vertical splits and switches</td></tr>
                 <tr><td class="listlcol">\at</td><td class="listrcol">new tab and switches</td></tr>
                 <tr><td class="listlcol">\an</td><td class="listrcol">cycles through next match</td></tr>
-			</table>
-		</td>
-		<td>
-			<table class="commands">
 				<tr><td/><br/></tr>
-				
                 <tr><td class="listlcol"><b>Easy Motion</b></td></tr>
                 <tr><td class="listlcol">\\w</td><td class="listrcol">easy motion word forward</td></tr>
                 <tr><td class="listlcol">\\b</td><td class="listrcol">easy motion word back</td></tr>
