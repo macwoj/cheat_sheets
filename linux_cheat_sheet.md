@@ -8,8 +8,7 @@ Command|Description
 `tar -xzf <tar.gz>`|
 `tar -xjf <tar.bz2>`|
 `tar -xf <all>`|
-`uname -a`|
-`uname -s`|
+`uname -a`|print all system information
 `ls -lS`|sort by size
 `ls -lSr`|sort by reverse size
 `ln -s myfile.txt mylink`|create soft link, works for dir
