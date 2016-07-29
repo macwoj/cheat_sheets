@@ -1,5 +1,5 @@
-http://stackoverflow.com/questions/5343190/how-do-i-replace-all-instances-of-a-string-with-another-string
-
+# string
+[source](http://stackoverflow.com/questions/5343190/how-do-i-replace-all-instances-of-a-string-with-another-string)
 ```c++
 std::string replaceString(std::string subject, const std::string& search,
                           const std::string& replace) {
