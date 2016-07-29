@@ -2,6 +2,8 @@
 class ParamTestClass: public ::testing::TestWithParam<boost::tuple<std::string,std::string,int,int> > {};
 TEST_P(ParamTestClass, testImplementation) {
         GetParam().get<0>();
+        SCOPED_TRACE("A");      // This trace point will be included in
+                                // every failure in this scope.
 }
 INSTANTIATE_TEST_CASE_P(TESTS,
         ParamTestClass,
