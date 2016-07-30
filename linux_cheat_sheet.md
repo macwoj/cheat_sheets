@@ -12,4 +12,4 @@ Command|Description
 `ls -lS`|sort by size
 `ls -lSr`|sort by reverse size
 `ln -s myfile.txt mylink`|create soft link, works for dir
-
+`nm -C`|show demangled symbols in library
