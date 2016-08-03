@@ -20,3 +20,13 @@ void replaceStringInPlace(std::string& subject, const std::string& search,
     }
 }
 ```
+
+# Boost
+[source]http://www.boost.org/doc/libs/1_61_0/doc/html/foreach.html
+```c++
+#include <boost/foreach.hpp>
+BOOST_FOREACH( char ch, hello )
+{
+    std::cout << ch;
+}
+```
