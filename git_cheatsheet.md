@@ -40,7 +40,7 @@ MISC|Description
 `git diff HEAD HEAD~1`|compare HEAD to commit right before HEAD
 `git fetch --all`|Download objects and refs from all remotes
 `git fetch --all; git branch -vv`|update git cache
-`git fetch local`|download objects from remote local
+`git fetch local`|download objects from source local
 `git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
 `git push origin develop`|push local develop branch to remote develop
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
@@ -92,6 +92,7 @@ git rebase -i HEAD~3|squash last 3 commits
 
 MERGE|Description
 -----|-----------
-git merge feature|merges feature into current branch
-git merge --abort|if you get conflicts you can cancel the merge
-git mergetool|run for conflicts
+`git merge feature`|merges local feature branch into current branch
+`git merge origin/feature`|merges remote feature branch into current branch
+`git merge --abort`|if you get conflicts you can cancel the merge
+`git mergetool`|run for conflicts
