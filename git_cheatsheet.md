@@ -38,8 +38,9 @@ MISC|Description
 `git commit --amend`|change last commit message
 `git config --global credential.helper cache`|no git password retyping
 `git diff HEAD HEAD~1`|compare HEAD to commit right before HEAD
-`git fetch --all`|Download objects and refs from remote
+`git fetch --all`|Download objects and refs from all remotes
 `git fetch --all; git branch -vv`|update git cache
+`git fetch local`|download objects from remote local
 `git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
 `git push origin develop`|push local develop branch to remote develop
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
