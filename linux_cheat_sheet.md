@@ -13,3 +13,4 @@ Command|Description
 `ls -lSr`|sort by reverse size
 `ln -s myfile.txt mylink`|create soft link, works for dir
 `nm -C`|show demangled symbols in library
+http://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files|sed
