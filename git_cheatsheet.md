@@ -46,6 +46,7 @@ MISC|Description
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
 `git remote show origin`|show info about remote, show repo URL
 `git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
+`git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`|add base fork branch to merge changes from
 `git remote remove local`|remove remote local
 `get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
