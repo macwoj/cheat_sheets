@@ -1,11 +1,29 @@
-var page = require('webpage').create();
-page.open('vim_cheatsheet.html', function(status) {
-    
-    console.log("Status: " + status);
-    if(status === "success") {
-        page.render('vim_cheatsheet.pdf');
-        page.zoomFactor = 2;
-        page.render('vim_cheatsheet.png');
+var saveTable = function() {
+    var page = require('webpage').create();
+    page.paperSize = {
+        format: 'Letter',
+        orientation: 'landscape'
     }
-    phantom.exit();
-});
+    page.open('vim_cheatsheet_table.html', function(status) {
+        console.log("Status: " + status);
+        if(status === "success") {
+            page.render('vim_cheatsheet_table.pdf');
+            phantom.exit();
+        }
+    });
+}
+var save = function() {
+    var page = require('webpage').create();
+    page.paperSize = {
+        format: 'Letter',
+        orientation: 'landscape'
+    }
+    page.open('vim_cheatsheet.html', function(status) {
+        console.log("Status: " + status);
+        if(status === "success") {
+            page.render('vim_cheatsheet.pdf');
+            saveTable();
+        }
+    });
+}
+save();
