@@ -2,7 +2,8 @@ var saveTable = function() {
     var page = require('webpage').create();
     page.paperSize = {
         format: 'Letter',
-        orientation: 'landscape'
+        orientation: 'landscape',
+        margin: '0.35in'
     }
     page.open('vim_cheatsheet_table.html', function(status) {
         console.log("Status: " + status);
@@ -16,7 +17,8 @@ var save = function() {
     var page = require('webpage').create();
     page.paperSize = {
         format: 'Letter',
-        orientation: 'landscape'
+        orientation: 'landscape',
+        margin: '0.35in'
     }
     page.open('vim_cheatsheet.html', function(status) {
         console.log("Status: " + status);
