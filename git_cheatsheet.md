@@ -46,7 +46,6 @@ MISC|Description
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
 `git remote show origin`|show info about remote, show repo URL
 `git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
-`git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`|add base fork branch to merge changes from
 `git remote remove local`|remove remote local
 `get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
@@ -83,12 +82,12 @@ STASH|Description
 
 REBASE|Description
 ------|-----------
-git rebase develop|this will rebase ontop of develop the current branch
-git rebase --abort|abort rebase
+`git rebase develop`|this will rebase ontop of develop the current branch
+`git rebase --abort`|abort rebase
 
 REBASE SQUASH|Description
 -------------|-----------
-git rebase -i HEAD~3|squash last 3 commits
+`git rebase -i HEAD~3`|squash last 3 commits
 
 
 MERGE|Description
@@ -97,3 +96,8 @@ MERGE|Description
 `git merge origin/feature`|merges remote feature branch into current branch
 `git merge --abort`|if you get conflicts you can cancel the merge
 `git mergetool`|run for conflicts
+
+#syncing fork
+`git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`
+`git fetch upstream`
+`git merge upstream/master`
