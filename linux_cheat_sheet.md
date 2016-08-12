@@ -14,3 +14,20 @@ Command|Description
 `ln -s myfile.txt mylink`|create soft link, works for dir
 `nm -C`|show demangled symbols in library
 http://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files|sed
+
+```bash
+if [[ -O /home/$USER/tmp && -d /home/$USER/tmp ]]; then
+        TMPDIR=/home/$USER/tmp
+else
+        # You may wish to remove this line, it is there in case
+        # a user has put a file 'tmp' in there directory or a
+        rm -rf /home/$USER/tmp 2> /dev/null
+        mkdir -p /home/$USER/tmp
+        TMPDIR=$(mktemp -d /home/$USER/tmp/XXXX)
+fi
+
+TMP=$TMPDIR
+TEMP=$TMPDIR
+
+export TMPDIR TMP TEMP
+```
