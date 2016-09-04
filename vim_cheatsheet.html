@@ -34,73 +34,8 @@
                     <td/><td/>
                     <td id="p01"><vimact>gg</vimact><br/><small>first line</small></td>
                     <td/><td/>
-                    <td rowspan=4 colspan=4>
-                        <table class="fixedlist" width=100%>
-                            <tr>
-                                <td>
-                                    <red><vimact>d</vimact></red> <small>delete/cut</small>
-                                </td>
-                                <td>
-                                    <vimact>dd</vimact> <small>delete line</small>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>y</vimact></red> <small>yank</small>
-                                </td>
-                                <td>
-                                    <vimact>yy</vimact> <small>yank line</small>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>c</vimact></red> <small>change (enter insert mode)</small>
-                                </td>
-                                <td>
-                                    <vimact>cc</vimact> <small>change line</small>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact><</vimact></red> <small>shift left</small><br/>
-                                </td>
-                                <td>
-                                    <vimact><<</vimact> <small>shift line left</small><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>></vimact></red> <small>shift right</small><br/>
-                                </td>
-                                <td>
-                                    <vimact>>></vimact> <small>shift line right</small><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>=</vimact></red> <small>indent</small>
-                                </td>
-                                <td>
-                                    <vimact>==</vimact> <small>indent line</small>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>~</vimact></red> <small>swap case</small><br/>
-                                </td>
-                                
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>gu</vimact></red> <small>lowercase</small><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <red><vimact>gU</vimact></red> <small>uppercase</small><br/>
-                                </td>
-                            </tr>
-                        </table>
+                    <td rowspan=6 colspan=4>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -160,8 +95,274 @@
                     <td><vimact>;</vimact><br/><small>next x<small></td>
                 </tr>
                 <tr>
-                    <td rowspan=4 colspan=5>
-                        <table class="fixedlist" width=100%>
+                    <td/><td/><td/><td/><td/>
+                    <td><vimact>)</vimact><br/><small>sentence</small></td>
+                    <td><vimact>}</vimact><br/><small>empty line</small></td>
+                    <td id="p01"><vimact>]]</vimact><br/><small>enclosing }<small></td>
+                    <td><vimact>])</vimact><br/><small>enclosing )<small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>zb</vimact><br/><small>screen on cursor</small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/>
+                    <td><vimact>C-d</vimact><br/><small>1/2 page</small></td>
+                    <td id="p01"><vimact>C-f</vimact><br/><small>page</small></td>
+                </tr>
+                <tr>
+                    <td/><td/><td/><td/><td/><td/><td/>
+                    <td id="p01"><vimact>/text</vimact><br/><small>find text</small></td>
+                    <td><vimact>n</vimact><br/><small>next text</small></td>
+                    <td><vimact>*</vimact><br/><small>find word under cursor</small></td>
+                </tr>
+                <tr>
+                    <td><vimact>''</vimact><br/><small>last location</small></td>
+                    <td><vimact>'.</vimact><br/><small>last edit</small></td>
+                    <td><vimact>#gg :#</vimact><br/><small>line #</small></td>
+                    <td><vimact>%</vimact><br/><small>matching bracket</small></td>
+                    <td><vimact>C-o</vimact><br/><small>jump prev</small></td>
+                    <td><vimact>C-i</vimact><br/><small>jump next</small></td>
+                    <td/>
+                    <td id="p01"><vimact>G</vimact><br/><small>last line</small></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <table class="fixedlist">
+                            <tr>
+                                <td class="headingtd" colspan=2>
+                                    <gray>[count]</gray>[motion]
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="headingtd" colspan=2>
+                                    <gray>"[register]</gray>[<red>operator</red>]<gray>[count]</gray>[motion]
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="headingtd" colspan=2>
+                                    <gray>"[register]</gray><gray>[count]</gray>[line operator]
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="headingtd" colspan=2>
+                                    <gray>"[register]</gray>[<red>operator</red>]<gray>[count]</gray>[text object]
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <table class="fixedlist">
+                                        <tr>
+                                            <td>
+                                                <small><u>registers</u></small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>"</vimact> <small>unnamed register</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>0</vimact> <small>most recent yank</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>1</vimact> <small>recent delete/change</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>2-9</vimact> <small>numbered registers</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>-</vimact> <small>small delete register - last change/delete within line</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>a-z</vimact> <small>named registers - replace contents</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>A-Z</vimact> <small>named registers - append contents</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>.</vimact> <small>last inserted text</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>%</vimact> <small>name of the current file</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>#</vimact> <small>name of the alternate file</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>:</vimact> <small>most recent executed command-line</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>_</vimact> <small>Black hole register</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>/</vimact> <small>Last search pattern register</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <vimact>"*, "+ and "~</vimact> <small>Selection and drop registers </small><br/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table class="fixedlist">
+                                        <tr>
+                                            <td>
+                                                <red><small><u>operator</u></small></red>
+                                            </td>
+                                            <td>
+                                                <small><u>line operator</u></small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>d</vimact></red> <small>delete/cut</small>
+                                            </td>
+                                            <td>
+                                                <vimact>dd</vimact> <small>delete line</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>y</vimact></red> <small>yank</small>
+                                            </td>
+                                            <td>
+                                                <vimact>yy</vimact> <small>yank line</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>c</vimact></red> <small>change (enter insert mode)</small>
+                                            </td>
+                                            <td>
+                                                <vimact>cc</vimact> <small>change line</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact><</vimact></red> <small>shift left</small><br/>
+                                            </td>
+                                            <td>
+                                                <vimact><<</vimact> <small>shift line left</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>></vimact></red> <small>shift right</small><br/>
+                                            </td>
+                                            <td>
+                                                <vimact>>></vimact> <small>shift line right</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>=</vimact></red> <small>indent</small>
+                                            </td>
+                                            <td>
+                                                <vimact>==</vimact> <small>indent line</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>~</vimact></red> <small>swap case</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>gu</vimact></red> <small>lowercase</small><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <red><vimact>gU</vimact></red> <small>uppercase</small><br/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="fixed">
+                            <tr>
+                                <td/>
+                                <td>
+                                    <vimact>s</vimact><br/><small>delete char and insert</small><br/>
+                                </td>
+                                <td id="p01"><vimact>O</vimact><br/><small>insert line</small></td>
+                            </tr>
+                            <tr >
+                                <td id="p01"><vimact>I</vimact><br/><small>insert line start</small></td>
+                                <td id="p01"><vimact>i</vimact><br/><small>insert</small></td>
+                                <td>
+                                    <vimact>J</vimact><br/><small>join with line (lines in visual)</small>
+                                </td>
+                                <td id="p01"><vimact>a</vimact><br/><small>insert after</small></td>
+                                <td><vimact>D</vimact><br/><small>delete to line end</small></td>
+                                <td><vimact>C</vimact><br/><small>delete to line end and insert</small></td>
+                                <td id="p01"><vimact>A</vimact><br/><small>insert line end</small></td>
+                            </tr>
+                            <tr>
+                                <td/>
+                                <td>
+                                    <vimact>r</vimact><br/><small>replace char</small>
+                                </td>
+                                <td id="p01"><vimact>o</vimact><br/><small>insert line</small></td>
+                            </tr>
+                            <tr>
+                                <td/>
+                                <td>
+                                    <vimact>x</vimact><br/><small>delete char</small><br/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="fixedlist">
+                            <tr>
+                                <td>
+                                    <small><u>text objects</u></small>
+                                </td>
+                            </tr>
                             <tr>
                                 <td id="p02">
                                     <vimact>a</vimact> <small>select "a"n object INCLUDING surrounding spaces/tags</small>
@@ -192,74 +393,8 @@
                             </tr>
                         </table>
                     </td>
-                    <td><vimact>)</vimact><br/><small>sentence</small></td>
-                    <td><vimact>}</vimact><br/><small>empty line</small></td>
-                    <td id="p01"><vimact>]]</vimact><br/><small>enclosing }<small></td>
-                    <td><vimact>])</vimact><br/><small>enclosing )<small></td>
                 </tr>
-                <tr>
-                    <td/><td/>
-                    <td id="p01"><vimact>zb</vimact><br/><small>screen on cursor</small></td>
-                </tr>
-                <tr>
-                    <td/>
-                    <td><vimact>C-d</vimact><br/><small>1/2 page</small></td>
-                    <td id="p01"><vimact>C-f</vimact><br/><small>page</small></td>
-                </tr>
-                <tr>
-                    <td/><td/>
-                    <td id="p01"><vimact>/text</vimact><br/><small>find text</small></td>
-                    <td><vimact>n</vimact><br/><small>next text</small></td>
-                    <td><vimact>*</vimact><br/><small>find word under cursor</small></td>
-                </tr>
-                <tr>
-                    <td><vimact>''</vimact><br/><small>last location</small></td>
-                    <td><vimact>'.</vimact><br/><small>last edit</small></td>
-                    <td><vimact>#gg :#</vimact><br/><small>line #</small></td>
-                    <td><vimact>%</vimact><br/><small>matching bracket</small></td>
-                    <td><vimact>C-o</vimact><br/><small>jump prev</small></td>
-                    <td><vimact>C-i</vimact><br/><small>jump next</small></td>
-                    <td/>
-                    <td id="p01"><vimact>G</vimact><br/><small>last line</small></td>
-                </tr>
-            </table>
-        </td>
-        <td>
-            <table class="fixed">
-
-                <tr>
-                    <td/>
-                    <td>
-                        <vimact>s</vimact><br/><small>delete char and insert</small><br/>
-                    </td>
-                    <td id="p01"><vimact>O</vimact><br/><small>insert line</small></td>
-                </tr>
-                <tr >
-                    <td id="p01"><vimact>I</vimact><br/><small>insert line start</small></td>
-                    <td id="p01"><vimact>i</vimact><br/><small>insert</small></td>
-                    <td>
-                        <vimact>J</vimact><br/><small>join with line (lines in visual)</small>
-                    </td>
-                    <td id="p01"><vimact>a</vimact><br/><small>insert after</small></td>
-                    <td><vimact>D</vimact><br/><small>delete to line end</small></td>
-                    <td><vimact>C</vimact><br/><small>delete to line end and insert</small></td>
-                    <td id="p01"><vimact>A</vimact><br/><small>insert line end</small></td>
-                </tr>
-                <tr>
-                    <td/>
-                    <td>
-                        <vimact>r</vimact><br/><small>replace char</small>
-                    </td>
-                    <td id="p01"><vimact>o</vimact><br/><small>insert line</small></td>
-                </tr>
-                <tr>
-                    <td/>
-                    <td>
-                        <vimact>x</vimact><br/><small>delete char</small><br/>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+            <table/>
+        </tr>
+    </table>
 </body>
