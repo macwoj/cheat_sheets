@@ -18,7 +18,7 @@ var save = function() {
     page.paperSize = {
         format: 'Letter',
         orientation: 'landscape',
-        margin: '0.3in'
+        margin: '0.25n'
     }
     page.open('vim_cheatsheet.html', function(status) {
         console.log("Status: " + status);
