@@ -20,18 +20,14 @@ git config merge.conflictstyle diff3
 git config mergetool.prompt false
 ```
 ### Commands
-MISC|Description
-----|-----------
+Command|Description
+-------|-----------
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
 `git branch -f branch-name new-tip-commit`|move branch pointer to commit
 `git branch -d branch_to_delete`|delete local branch
 `git branch -m branch_to_rename`|rename local branch
 `git branch -u origin/develop`|set current branch to track remote branch
-`git checkout filename`|revert changes in file
-`git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
-`git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
-`git checkout tags/<tag_name>`|
 `git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git cherry-pick sha`|Apply the commit with sha to the current branch 
 `git cherry-pick ebe6942^..905e279`|Apply the range of commits to the current branch that is inclusive of both range endpoints 
@@ -44,13 +40,24 @@ MISC|Description
 `git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
 `git push origin develop`|push local develop branch to remote develop
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
-`git remote show origin`|show info about remote, show repo URL
-`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
-`git remote remove local`|remove remote local
 `get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
 `git rev-parse HEAD`|get sha of current commit
+
+CHECKOUT|Description
+-------|-----------
+`git checkout filename`|revert changes in file
+`git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
+`git checkout -b develop origin/develop`|create local branch from remote branch
+`git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
+`git checkout tags/<tag_name>`|
+
+REMOTE|Description
+------|-----------
+`git remote show origin`|show info about remote, show repo URL
+`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
+`git remote remove local`|remove remote local
 
 GUI|Description
 ---|-----------
