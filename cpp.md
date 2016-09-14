@@ -29,4 +29,9 @@ BOOST_FOREACH( char ch, hello )
 {
     std::cout << ch;
 }
+
+typedef std::map<int, int> map_t;
+map_t mmap;  
+BOOST_FOREACH( map_t::value_type &i, mmap )
+    i.second++;
 ```
