@@ -77,6 +77,7 @@ SUBMODULE|Description
 `git submodule status`|show  sha's of all the submodules
 `git pull origin develop`|update submodule to latest develop branch, do this from submodule folder
 `git submodule sync`|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
+`git reset --hard sha`|fix merging conflicts in submodule, set it to the right sha
 
 STASH|Description
 -----|-----------
