@@ -105,7 +105,14 @@ MERGE|Description
 `git merge --abort`|if you get conflicts you can cancel the merge
 `git mergetool`|run for conflicts
 
+#Fork
 #syncing fork
-`git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`
-`git fetch upstream`
-`git merge upstream/master`
+```bash
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git fetch upstream
+git merge upstream/master
+```
+#get new branch from fork then push to origin and change tracking to origin
+```bash
+git checkout -b newbranch upstream/newbranch
+git push -u origin newbranch
