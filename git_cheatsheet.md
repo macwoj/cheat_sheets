@@ -106,13 +106,13 @@ MERGE|Description
 `git mergetool`|run for conflicts
 
 #Fork
-*syncing fork
+* syncing fork
 ```bash
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 git fetch upstream
 git merge upstream/master
 ```
-*get new branch from fork then push to origin and change tracking to origin
+* get new branch from fork then push to origin and change tracking to origin
 ```bash
 git checkout -b newbranch upstream/newbranch
 git push -u origin newbranch
