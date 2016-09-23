@@ -12,3 +12,5 @@ $hexified = "00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00".Split(
 $kbLayout = 'HKLM:\System\CurrentControlSet\Control\Keyboard Layout'
 New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Value ([byte[]]$hexified)
 ```
+
+http://johnhaller.com/useful-stuff/disable-caps-lock
