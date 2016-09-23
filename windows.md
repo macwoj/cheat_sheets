@@ -1,4 +1,5 @@
 #caps to ctrl
+http://superuser.com/questions/949385/map-capslock-to-control-in-windows-10
 ```
 Windows Registry Editor Version 5.00
 
