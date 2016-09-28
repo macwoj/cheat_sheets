@@ -22,6 +22,7 @@ git config mergetool.prompt false
 ### Commands
 Command|Description
 -------|-----------
+`git ls-files -co --exclude-standard path | grep '\.py$' | xargs git add`|only add py files from path directory
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
 `git branch -f branch-name new-tip-commit`|move branch pointer to commit
