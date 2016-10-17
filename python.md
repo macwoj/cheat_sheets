@@ -16,3 +16,9 @@ with open('mydata.csv', 'w') as mycsvfile:
     for row in arrayofdata:
         thedatawriter.writerow(row)
 ```
+
+#### ignore exception
+```python
+except:
+    pass
+```
