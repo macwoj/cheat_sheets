@@ -57,6 +57,7 @@ PUSH|Description
 `git push origin develop`|push local develop branch to remote develop
 `git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
 `git push -u origin develop`|push local develop branch to remote develop and set local to track origin/develop
+`git push -u origin`|push local branch to remote and set local to track origin
 
 REMOTE|Description
 ------|-----------
