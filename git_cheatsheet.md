@@ -38,9 +38,6 @@ Command|Description
 `git fetch --all`|Download objects and refs from all remotes
 `git fetch --all; git branch -vv`|update git cache
 `git fetch local`|download objects from source local
-`git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
-`git push origin develop`|push local develop branch to remote develop
-`git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
 `get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
@@ -53,6 +50,13 @@ CHECKOUT|Description
 `git checkout -b develop origin/develop`|create local branch from remote branch
 `git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
 `git checkout tags/<tag_name>`|
+
+PUSH|Description
+----|-----------
+`git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
+`git push origin develop`|push local develop branch to remote develop
+`git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
+`git push -u origin develop`|push local develop branch to remote develop and set local to track origin/develop
 
 REMOTE|Description
 ------|-----------
