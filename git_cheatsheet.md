@@ -20,18 +20,15 @@ git config merge.conflictstyle diff3
 git config mergetool.prompt false
 ```
 ### Commands
-MISC|Description
-----|-----------
+Command|Description
+-------|-----------
+`git ls-files -co --exclude-standard path | grep '\.py$' | xargs git add`|only add py files from path directory
 `git apply yourcoworkers.diff`|apply patch from file
 `git branch -avv`|view tracking branches
 `git branch -f branch-name new-tip-commit`|move branch pointer to commit
 `git branch -d branch_to_delete`|delete local branch
 `git branch -m branch_to_rename`|rename local branch
 `git branch -u origin/develop`|set current branch to track remote branch
-`git checkout filename`|revert changes in file
-`git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
-`git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
-`git checkout tags/<tag_name>`|
 `git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git cherry-pick sha`|Apply the commit with sha to the current branch 
 `git cherry-pick ebe6942^..905e279`|Apply the range of commits to the current branch that is inclusive of both range endpoints 
@@ -41,17 +38,32 @@ MISC|Description
 `git fetch --all`|Download objects and refs from all remotes
 `git fetch --all; git branch -vv`|update git cache
 `git fetch local`|download objects from source local
-`git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
-`git push origin develop`|push local develop branch to remote develop
-`git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
-`git remote show origin`|show info about remote, show repo URL
-`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
-`git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`|add base fork branch to merge changes from
-`git remote remove local`|remove remote local
 `get reset`|remove all files from index
 `git reset --hard HEAD`|discard any changes
 `git reset --hard HEAD~1`|discard last commit
 `git rev-parse HEAD`|get sha of current commit
+
+CHECKOUT|Description
+-------|-----------
+`git checkout filename`|revert changes in file
+`git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
+`git checkout -b develop origin/develop`|create local branch from remote branch
+`git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
+`git checkout tags/<tag_name>`|
+
+PUSH|Description
+----|-----------
+`git push origin mwojton:fmlrefactor`|push local mwojton branch to remote fmlrefactor
+`git push origin develop`|push local develop branch to remote develop
+`git push --force origin develop`|push the local branch ptr to remote CAREFUL !!!!!
+`git push -u origin develop`|push local develop branch to remote develop and set local to track origin/develop
+`git push -u origin`|push local branch to remote and set local to track origin
+
+REMOTE|Description
+------|-----------
+`git remote show origin`|show info about remote, show repo URL
+`git remote add local ../otherrepo`|add remote branch from local repo in different directory, call it local
+`git remote remove local`|remove remote local
 
 GUI|Description
 ---|-----------
@@ -71,6 +83,7 @@ SUBMODULE|Description
 `git submodule status`|show  sha's of all the submodules
 `git pull origin develop`|update submodule to latest develop branch, do this from submodule folder
 `git submodule sync`|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
+`git reset --hard sha`|fix merging conflicts in submodule, set it to the right sha
 
 STASH|Description
 -----|-----------
@@ -83,12 +96,12 @@ STASH|Description
 
 REBASE|Description
 ------|-----------
-git rebase develop|this will rebase ontop of develop the current branch
-git rebase --abort|abort rebase
+`git rebase develop`|this will rebase ontop of develop the current branch
+`git rebase --abort`|abort rebase
 
 REBASE SQUASH|Description
 -------------|-----------
-git rebase -i HEAD~3|squash last 3 commits
+`git rebase -i HEAD~3`|squash last 3 commits
 
 
 MERGE|Description
@@ -97,3 +110,15 @@ MERGE|Description
 `git merge origin/feature`|merges remote feature branch into current branch
 `git merge --abort`|if you get conflicts you can cancel the merge
 `git mergetool`|run for conflicts
+
+#Fork
+* syncing fork
+```bash
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git fetch upstream
+git merge upstream/master
+```
+* get new branch from fork then push to origin and change tracking to origin
+```bash
+git checkout -b newbranch upstream/newbranch
+git push -u origin newbranch
