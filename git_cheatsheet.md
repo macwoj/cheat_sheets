@@ -49,7 +49,8 @@ CHECKOUT|Description
 `git checkout -b newbranch -t origin/develop`|create a new branch , setup remote tracking and switch to it, note that it will be at the origin/develop NOT current commit
 `git checkout -b develop origin/develop`|create local branch from remote branch
 `git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"`|revert deleted file
-`git checkout tags/<tag_name>`|
+`git checkout tags/<tag_name>`|checkout tag
+`git ch -b branch sha`|create new branch at commit and checkout
 
 PUSH|Description
 ----|-----------
