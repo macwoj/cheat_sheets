@@ -3,7 +3,7 @@
 doubled = [num * 2 for num in lst]
 ```
 ```python
-expression_if_true if condition else expression_if_false
+[expression_if_true if condition else expression_if_false]
 ```
 ####csv
 ```python
@@ -19,6 +19,10 @@ with open('mydata.csv', 'w') as mycsvfile:
 
 #### ignore exception
 ```python
+try:
 except:
     pass
+```
+#### class
+```python
 ```
