@@ -3,7 +3,7 @@ var saveTable = function() {
     page.paperSize = {
         format: 'Letter',
         orientation: 'landscape',
-        margin: '0.3in'
+        margin: '0.1in'
     }
     page.open('vim_cheatsheet_table.html', function(status) {
         console.log("Status: " + status);
@@ -43,7 +43,7 @@ var save = function() {
     page.paperSize = {
         format: 'Letter',
         orientation: 'landscape',
-        margin: '0.25n'
+        margin: '0.1in'
     }
     page.open('vim_cheatsheet.html', function(status) {
         console.log("Status: " + status);
