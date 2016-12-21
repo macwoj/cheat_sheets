@@ -1,3 +1,9 @@
+####for
+* iterate with index
+```python
+for idx, val in enumerate(ints):
+    print(idx, val)
+```
 ####list comprehension
 ```python
 doubled = [num * 2 for num in lst]
