@@ -12,6 +12,18 @@ body {
     background-color: #FFFFFF;
 }
 
+#grayback {
+    background-color: #FCFCFC   ;
+}
+
+#graybacktbl {
+    background-color: #FCFCFC   ;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #F0F0F0;
+}
+
+
 #fit {
     height: 100%;
 }
