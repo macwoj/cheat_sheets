@@ -63,7 +63,7 @@ table.fixedlist tr {
 
 table.fixedlist td {
     text-align:left;
-    vertical-align:top;
+    vertical-align:bottom;
     line-height: 0.8;
 }
 
