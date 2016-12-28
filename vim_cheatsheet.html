@@ -23,6 +23,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                             <td colspan=2>
                                 <medium><u>insert mode</u></medium>
                             </td>
@@ -42,6 +43,12 @@
                             <td>
                                 <vimactsmall>C-r<gray>[r]</gray></vimactsmall><br/><small>paste</small>
                             </td>
+                            <td>
+                                <vimactsmall>C-w</vimactsmall><br/><small>delete word before</small>
+                            </td>
+                            <td>
+                                <vimactsmall>C-u</vimactsmall><br/><small>delete line before</small>
+                            </td>
                         </tr>
                         <tr>
                             <td id="p01"><vimact>V</vimact><br/><small>visual line mode</small></td>
@@ -54,6 +61,16 @@
                             <td><vimact>#</vimact><br/><small>find word under cursor</small></td>
                             <td><vimact>N</vimact><br/><small>prev text</small></td>
                             <td id="p01"><vimact>?text</vimact><br/><small>find text</small></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <vimactsmall>C-t</vimactsmall><br/><small>increase indent</small>
+                            </td>
+                            <td>
+                                <vimactsmall>C-d</vimactsmall><br/><small>decrease indent</small>
+                            </td>
                         </tr>
                         <tr>
                             <td id="p01"><vimact>C-v</vimact><br/><small>visual block mode</small></td>
@@ -125,12 +142,21 @@
                             <td id="p01"><vimact>zb</vimact><br/><small>screen on cursor</small></td>
                         </tr>
                         <tr>
-                            <td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td>
+                                <medium><u>jump motions</u></medium>
+                            </td>
+                            <td></td><td></td><td></td><td></td><td></td>
                             <td><vimact>C-d</vimact><br/><small>1/2 page</small></td>
                             <td id="p01"><vimact>C-f</vimact><br/><small>page</small></td>
                         </tr>
                         <tr>
-                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td id="p01"><vimact>C-o</vimact><br/><small>jump prev</small></td>
+                            <td id="p01"><vimact>C-i</vimact><br/><small>jump next</small></td>
+                            <td id="p01"><vimact>:ju</vimact><br/><small>view jump list</small></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td id="p01"><vimact>/text</vimact><br/><small>find text</small></td>
                             <td><vimact>n</vimact><br/><small>next text</small></td>
                             <td><vimact>*</vimact><br/><small>find word under cursor</small></td>
@@ -140,8 +166,8 @@
                             <td id="p01"><vimact>'.</vimact><br/><small>last edit</small></td>
                             <td id="p01"><vimact>#gg :#</vimact><br/><small>line #</small></td>
                             <td id="p01"><vimact>%</vimact><br/><small>matching bracket</small></td>
-                            <td id="p01"><vimact>C-o</vimact><br/><small>jump prev</small></td>
-                            <td id="p01"><vimact>C-i</vimact><br/><small>jump next</small></td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td id="p01"><vimact>G</vimact><br/><small>last line</small></td>
                         </tr>
@@ -506,6 +532,6 @@
         </table>
     </body>
     <footer>
-        <small><span style='float:right'>&copy; Copyright 2016, Maciej Wojton</span></small>
+        <small><span style='float:right'>www.maciejwojton.com</span></small>
     </footer>
 </html>
