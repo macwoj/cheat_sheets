@@ -6,7 +6,8 @@ for idx, val in enumerate(ints):
     
 # list comprehension
 doubled = [num * 2 for num in lst]
-[expression_if_true if condition else expression_if_false]
+#with filter
+M = [x for x in S if x % 2 == 0]
 
 n = len(L)
 item = L[index]
@@ -36,6 +37,10 @@ M = L[:] # create a copy
 L.append(item) #adds a single item to the end of the list,
 L.extend(sequence) #adds items from another list (or any sequence) to the end
 L.insert(index, item) #inserts an item at a given index, and move the remaining items to the right
+```
+####if
+```python
+[expression_if_true if condition else expression_if_false]
 ```
 ####csv
 ```python
