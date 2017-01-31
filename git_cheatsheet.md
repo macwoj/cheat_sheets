@@ -85,6 +85,7 @@ SUBMODULE|Description
 `git pull origin develop`|update submodule to latest develop branch, do this from submodule folder
 `git submodule sync`|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
 `git reset --hard sha`|fix merging conflicts in submodule, set it to the right sha
+`git submodule add git@mygithost:billboard lib/billboard`|add submodule
 
 STASH|Description
 -----|-----------
