@@ -31,3 +31,6 @@ TEMP=$TMPDIR
 
 export TMPDIR TMP TEMP
 ```
+# tmux
+https://github.com/tmux-plugins/tmux-pain-control
+https://github.com/tmux-plugins/tmux-yank
