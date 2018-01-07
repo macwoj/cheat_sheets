@@ -79,6 +79,8 @@ STAGING|Description
 
 SUBMODULE|Description
 ---------|-----------
+* https://git-scm.com/docs/git-submodule
+* http://www.vogella.com/tutorials/GitSubmodules/article.html
 `git submodule foreach git pull`|update all submodules to latest
 `git submodule update --init --recursive`|update to the checked in sha
 `git submodule status`|show  sha's of all the submodules
