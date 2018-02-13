@@ -28,6 +28,7 @@ Command|Description
 `git branch -f branch-name new-tip-commit`|move branch pointer to commit
 `git branch -d branch_to_delete`|delete local branch
 `git branch -m branch_to_rename`|rename local branch
+`git push origin --delete branch_to_delete`|delete remote branch
 `git branch -u origin/develop`|set current branch to track remote branch
 `git cherry-pick develop`|Apply the change introduced by the commit at the tip of the branch and create a new commit
 `git cherry-pick sha`|Apply the commit with sha to the current branch 
