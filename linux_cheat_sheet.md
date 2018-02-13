@@ -1,6 +1,6 @@
 Command|Description
 -------|-----------
-`du -h --max-depth=1 | sort -h`|list sorted folder size
+`du -h --max-depth=1 sort -h`|list sorted folder size
 `find . -name '*.o' -delete`| delete all .o files recursively from current directory
 `find . -name a -type d -exec rm -rf {} \;`|rm all dirs
 `touch "foo.backup.$(date +%F_%R)"`|create file with the current datatime
