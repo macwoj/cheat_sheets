@@ -34,3 +34,4 @@ export TMPDIR TMP TEMP
 # tmux
 * https://github.com/tmux-plugins/tmux-pain-control
 * https://github.com/tmux-plugins/tmux-yank
+* renumber windows :move-window -r
