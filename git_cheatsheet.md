@@ -115,8 +115,9 @@ MERGE|Description
 `git merge origin/feature`|merges remote feature branch into current branch
 `git merge --abort`|if you get conflicts you can cancel the merge
 `git mergetool`|run for conflicts
+`for i in $(git ls-tree -r --name-only sourcebranch); do git checkout source branch -- $i; done`|move all files into current branch from source branch
 
-#Fork
+# Fork
 * syncing fork
 ```bash
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
