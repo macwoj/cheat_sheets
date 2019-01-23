@@ -89,6 +89,10 @@ http://www.vogella.com/tutorials/GitSubmodules/article.html|
 `git submodule sync`|Synchronizes submodules' remote URL configuration setting to the value specified in .gitmodules
 `git reset --hard sha`|fix merging conflicts in submodule, set it to the right sha
 `git submodule add git@mygithost:billboard lib/billboard`|add submodule
+`git submodule deinit <path_to_submodule>`|remove submodule
+`git rm <path_to_submodule>`|
+`git commit -m "Removed submodule"`|
+`rm -rf .git/modules/<path_to_submodule>`|
 
 STASH|Description
 -----|-----------
